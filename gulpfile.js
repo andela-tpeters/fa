@@ -63,7 +63,7 @@ gulp.task('html::pug', function() {
 	return gulp.src(htmlFiles)
 				.pipe(pug({}))
 				.pipe(rename(function(path) {
-					path.extname = ".ejs";
+					path.extname = ".html";
 				}))
 				.pipe(gulp.dest('public'))
 				.pipe(livereload());
