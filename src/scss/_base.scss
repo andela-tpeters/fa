@@ -1,0 +1,49 @@
+body {
+	font-family: $base_font;
+	font-size: $base_font_size;
+}
+
+.main-container {
+	@include calculate(1440, 'max-width');
+}
+
+.logo-row-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 100%;
+	background-color: white;
+	z-index: 10000;
+}
+
+.menu-container{
+	@include calculate(65, 'margin-top');
+}
+
+.logo {
+	@extend .flex;
+	@extend .v-center;
+	@include calculate(58, 'min-height');
+	.logo-content {
+		@include calculate(10, 'padding-left');
+	}
+}
+
+.logo-row {
+	@include calculate(1440, 'max-width');
+	@include calculate(60, 'min-height');
+}
+
+.signin {
+	@extend .flex;
+	@extend .v-center;
+	@include calculate(58, 'min-height');
+	.signin-content {
+		@include calculate(10, 'padding-right');
+	}
+}
+
+.content-margin {
+	// margin: 20px;
+}

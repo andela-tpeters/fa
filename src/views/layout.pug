@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title Template
+    block styles
+      link(href="css/normalize.css", rel="stylesheet")
+      link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400", rel="stylesheet")
+      link(href="css/font-awesome.min.css", rel="stylesheet")
+      link(href="css/skeleton.css", rel="stylesheet")
+      link(href="css/main.min.css", rel="stylesheet")
+  body
+    .content-margin
+      header.u-full-width.row
+        .logo-row-container
+          .container.main-container
+            .row.logo-row
+              .four.columns
+                .logo
+                  .logo-content LOGO
+              .four.columns.u-pull-right
+                div.u-pull-right.signin
+                  .signin-content Signin Or SignUp
+        .menu-container
+          .container.main-container
+            .row
+              .twelve.columns
+                .menu-wrapper
+                  a(href="#", class="butto") First
+                  a(href="#", class="butto") Second
+                  a(href="#", class="butto") Third
+                  a(href="#", class="butto") Fourth
+      block content
+        .row
+          .banner-wrapper(style="background-image: url('http://placehold.it/1440x500?text=banner+space'); height: 500px;")
+
+      footer.u-full-width.row
+        .container
+          .row
+            .four.columns
+              p Hey
+            .four.columns
+              p You
+            .four.columns
+              p That
+      
