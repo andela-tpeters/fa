@@ -1,10 +1,10 @@
-.flex, .logo, .signin {
+.flex, .menu-wrapper, .logo, .signin {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-.v-center, .logo, .signin {
+.v-center, .menu-wrapper, .logo, .signin {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -46,7 +46,18 @@ body {
 }
 
 .menu-container {
+    background-color: #ececec;
+}
+
+.ibutton, .menu-wrapper .button, .signin .signin-content .button {
+    margin-bottom: unset;
+    border: unset;
+}
+
+.menu-wrapper {
+    min-height: calc(0.0625em * 50);
     margin-top: calc(0.0625em * 65);
+    padding: calc(0.0625em * 7.5);
 }
 
 .logo {
@@ -68,4 +79,9 @@ body {
 
 .signin .signin-content {
     padding-right: calc(0.0625em * 10);
+}
+
+.signin .signin-content .button-signup {
+    background-color: #0c6130;
+    color: white;
 }

@@ -18,7 +18,23 @@ body {
 }
 
 .menu-container{
+	background-color: #ececec;
+}
+
+.ibutton {
+	margin-bottom: unset;
+	border: unset;
+}
+
+.menu-wrapper {
+	@extend .flex;
+	@extend .v-center;
+	@include calculate(50, 'min-height');
 	@include calculate(65, 'margin-top');
+	@include calculate(7.5, 'padding');
+	.button {
+		@extend .ibutton;
+	}
 }
 
 .logo {
@@ -41,6 +57,13 @@ body {
 	@include calculate(58, 'min-height');
 	.signin-content {
 		@include calculate(10, 'padding-right');
+		.button {
+			@extend .ibutton;
+		}
+		.button-signup {
+			background-color: $forestgreen;
+			color: white;
+		}
 	}
 }
 
