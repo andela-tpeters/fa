@@ -67,6 +67,12 @@ body {
 	}
 }
 
-.content-margin {
-	// margin: 20px;
+.top-heading {
+	@include calculate(10, 'padding');
+	opacity: .8;
+	@extend .flex;
+	@extend .v-center;
 }
+
+
+

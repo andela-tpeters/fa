@@ -87,7 +87,8 @@ gulp.task('js:build', function(c) {
 
 gulp.task('sass:watch', function() {
 	livereload.listen();
-	gulp.watch(absolutePath('src','scss') + "*.scss", ['sassify', 'minify-css']);
+	// gulp.watch(absolutePath('src','scss') + "*.scss", ['sassify', 'minify-css']);
+	gulp.watch("src/scss/*.scss", ['sassify', 'minify-css']);
 });
 
 gulp.task('pug:watch', function() {

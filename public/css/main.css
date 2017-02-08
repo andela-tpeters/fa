@@ -1,16 +1,16 @@
-.flex, .menu-wrapper, .logo, .signin {
+.flex, .menu-wrapper, .logo, .signin, .top-heading {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-.v-center, .menu-wrapper, .logo, .signin {
+.v-center, .menu-wrapper, .logo, .signin, .top-heading {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
 }
 
-.j-content-center {
+.j-content-center, .company-summary .top-heading {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -83,5 +83,79 @@ body {
 
 .signin .signin-content .button-signup {
     background-color: #0c6130;
+    color: white;
+}
+
+.top-heading {
+    padding: calc(0.0625em * 10);
+    opacity: .8;
+}
+
+.banner-wrapper {
+    background-image: url("http://placehold.it/1440x500?text=banner+space");
+    min-height: calc(0.0625em * 500);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.company-summary {
+    background-color: white;
+    margin-top: calc(0.0625em * 100);
+    margin-bottom: calc(0.0625em * 150);
+}
+
+.company-summary .top-heading {
+    color: #27ae60;
+}
+
+.company-summary p {
+    line-height: calc(0.0625em * 30);
+    font-size: calc(0.0625em * 20);
+    opacity: .7;
+    text-align: center;
+}
+
+.company-summary p i.fa-quote-left {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.company-summary p i.fa-quote-right {
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+}
+
+.company-summary p i {
+    font-size: calc(0.0625em * 40);
+    opacity: .4;
+}
+
+.company-summary p .first-letter {
+    font-size: calc(0.0625em * 50);
+    color: #ae3127;
+}
+
+.latest {
+    background-color: #ececec;
+    min-height: calc(0.0625em * 500);
+    padding-top: calc(0.0625em * 50);
+    padding-bottom: calc(0.0625em * 50);
+}
+
+.latest-item {
+    min-height: calc(0.0625em * 333);
+    margin-bottom: calc(0.0625em * 10);
+    background-color: white;
+}
+
+footer {
+    min-height: calc(0.0625em * 400);
+    padding-top: calc(0.0625em * 40);
+    padding-bottom: calc(0.0625em * 40);
+    background-color: black;
+}
+
+.footer-div {
     color: white;
 }

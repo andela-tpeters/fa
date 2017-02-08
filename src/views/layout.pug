@@ -31,17 +31,40 @@ html
                   a(href="#", class="button") Second
                   a(href="#", class="button") Third
                   a(href="#", class="button") Fourth
-      block content
-        .row
-          .banner-wrapper(style="background-image: url('http://placehold.it/1440x500?text=banner+space'); height: 500px;")
 
+      block content
       footer.u-full-width.row
-        .container
+        .container.main-container
           .row
-            .four.columns
-              p Hey
-            .four.columns
-              p You
-            .four.columns
-              p That
+            .three.columns
+              .footer-div
+                h5
+                  i(class="fa fa-signal")
+                  | &nbsp;&nbsp;&nbsp;Discover
+            .three.columns
+              .footer-div
+                h5
+                  i(class="fa fa-building")
+                  | &nbsp;&nbsp;&nbsp;Company
+            .three.columns
+              .footer-div
+                h5
+                  i(class="fa fa-search-plus")
+                  | &nbsp;&nbsp;&nbsp;Solutions
+            .three.columns
+              .footer-div
+                h5
+                  i(class="fa fa-phone")
+                  | &nbsp;&nbsp;&nbsp;Contact Us
+          .row
+            .twelve.columns
+              .copyright
+                p
+                  | &copy; Company
+
+    block scripts
+      script(src="js/jquery-3.1.1.min.js", type="text/javascript")
+      script(src="js/masonry.pkgd.js", type="text/javascript")
+      script(src="js/main.min.js", type="text/javascript")
+
       
