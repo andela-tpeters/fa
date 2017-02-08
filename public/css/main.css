@@ -1,0 +1,71 @@
+.flex, .logo, .signin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.v-center, .logo, .signin {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.j-content-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.j-content-end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.border {
+    border: 1px solid;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+.main-container {
+    max-width: calc(0.0625em * 1440);
+}
+
+.logo-row-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    z-index: 10000;
+}
+
+.menu-container {
+    margin-top: calc(0.0625em * 65);
+}
+
+.logo {
+    min-height: calc(0.0625em * 58);
+}
+
+.logo .logo-content {
+    padding-left: calc(0.0625em * 10);
+}
+
+.logo-row {
+    max-width: calc(0.0625em * 1440);
+    min-height: calc(0.0625em * 60);
+}
+
+.signin {
+    min-height: calc(0.0625em * 58);
+}
+
+.signin .signin-content {
+    padding-right: calc(0.0625em * 10);
+}
