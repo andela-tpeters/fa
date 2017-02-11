@@ -145,6 +145,10 @@ body {
     padding-right: calc(0.0625em * 10);
 }
 
+.signin .signin-content .button {
+    font-size: 13px;
+}
+
 .signin .signin-content .button-signup {
     background-color: #0c6130;
     color: white;
@@ -383,6 +387,27 @@ body {
     text-decoration: none;
     text-align: center;
     cursor: pointer;
+}
+
+.member a i {
+    font-size: 16px;
+}
+
+.member .post-job span {
+    padding-right: 10px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.member .post-job i {
+    color: #0c6130;
+}
+
+.member .member-avatar {
+    display: inline-block;
+    padding-left: 7px;
+    padding-right: 10px;
+    font-size: 13px;
 }
 
 footer {

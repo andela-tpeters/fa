@@ -16,12 +16,10 @@ html
             .row.logo-row
               .four.columns
                 .logo
-                  .logo-content <b>SERVICE HUB</b>
-              .four.columns.u-pull-right
-                div.u-pull-right.signin
-                  .signin-content
-                    a(href="#", class="button") Signin
-                    a(href="#", class="button button-signup") SignUp
+                  .logo-content
+                    a(href="/", style="text-decoration: none; color: black") <b>SERVICE HUB</b>
+              block loggedInMenu
+              
         .menu-container
           .container.menubar-container
             .row

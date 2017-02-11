@@ -7,6 +7,7 @@ app.use(express.static('public'));
 app.use(morgan('common'));
 
 app.get('/', function(req, res) { res.sendFile(__dirname + '/public/homepage.html'); });
+app.get('/member', function(req, res) { res.sendFile(__dirname + '/public/member.html'); });
 
 app.listen(port, function() { console.log("I am listening at: " + port); });
 

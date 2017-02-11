@@ -114,6 +114,7 @@ body {
 		@include calculate(10, 'padding-right');
 		.button {
 			@extend .ibutton;
+			font-size: 13px;
 		}
 		.button-signup {
 			background-color: $forestgreen;
@@ -147,4 +148,15 @@ body {
 	word-spacing: 3px;
 }
 
+.v-separator {
+	// @extend .border;
+	// color: black;
+	// z-index: 20px;
+	// width: 10px;
+	// position: absolute;
+	// height: 30px;
+	// top: 0;
+	// display: inline-block;
+	// transform: rotateX(80deg);
+}
 
