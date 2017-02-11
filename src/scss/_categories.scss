@@ -1,0 +1,36 @@
+.categories {
+	@extend .cat-latest-section;
+}
+
+.category-item {
+	@extend .latest-item;
+	@include calculate(264, 'min-height');
+	position: relative;
+	@extend .flex;
+	@extend .v-center;
+	@extend .j-content-center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,.5);
+		height: 100%;
+		border-radius: 4px;
+	}
+
+	.item-text {
+		position: absolute;
+		z-index: 10;
+		color: white;
+		@include calculate(22, 'font-size');
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,21 @@
+footer {
+	@include calculate(400, 'min-height');
+	@include calculate(40, 'padding-top');
+	@include calculate(40, 'padding-bottom');
+	background-color: black;
+}
+
+.footer-div {
+	color: white;
+	h5 {
+		color: $mediumseagreen;
+		opacity: .6;
+	}
+
+	ul {
+		opacity: .8;
+	}
+}
+
+.copyright-row {
+}

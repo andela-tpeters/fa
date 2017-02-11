@@ -1,0 +1,59 @@
+.latest {
+	@extend .cat-latest-section;
+}
+
+.latest-item {
+	@include calculate(340, 'min-height');
+	@include calculate(20, 'margin-bottom');
+	background-color: white;
+	box-shadow: 2px 5px 43px rgba(188, 207, 219, 0.65);
+	border-radius: 4px;
+}
+
+.item-img {
+	@include calculate(176.5, 'min-height');
+	// background-image: url('http://lorempixel.com/200/200');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.item-desc {
+	@include calculate(14, 'font-size');
+	@include calculate(15, 'padding');
+}
+
+.caption {
+	h5 {
+		a {
+			@include calculate(14, 'font-size');
+			text-decoration: none;
+			transition: all .5s;
+			color: black;
+			cursor: pointer;
+			&:hover {
+				color: $mediumseagreen;
+			}
+		}
+	}
+}
+
+.author-row {
+	@include calculate(2, "margin-top"); 
+	@include calculate(10, "margin-bottom");
+	@include calculate(18, "font-size");
+	.author-rating {
+		i {
+			@include calculate(5, 'margin-left');
+			color: $mediumseagreen;
+		}
+	}
+}
+
+.price-row {
+	div {
+		.price {
+			@include calculate(40, "font-size");
+			color: $mediumseagreen;
+		}
+	}
+}

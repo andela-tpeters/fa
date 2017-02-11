@@ -1,0 +1,141 @@
+.banner-wrapper {
+	background-image: url('http://lorempixel.com/1440/500/technics');
+	@include calculate(500, 'min-height');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	@extend .flex;
+	@extend .v-center;
+	@extend .j-content-center;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		background-color: rgba(0,0,0, .5);
+	}
+}
+
+.company-summary {
+	background-color: white;
+	@include calculate(100, 'margin-top');
+	@include calculate(150, 'margin-bottom');
+	.top-heading {
+		color: $mediumseagreen;
+		@extend .j-content-center;
+	}
+	p {
+		@include calculate(30, "line-height");
+		@include calculate(20, 'font-size');
+		opacity: .7;
+		text-align: center;
+
+		i.fa-quote-left {
+			transform: translateY(-10px);
+		}
+
+		i.fa-quote-right {
+			transform: translateY(15px);
+		}
+
+		i {
+			@include calculate(40, 'font-size');
+			opacity: .4;
+		}
+
+
+		.first-letter {
+			@include calculate(50, "font-size");
+			color: $brown;
+		}
+	}
+}
+
+.badge {
+	.what-icon-container {
+		text-align: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		@include calculate(100, 'min-height');
+		@include calculate(20, "margin-bottom");
+	}
+
+	.text {
+		text-align: center;
+		color: rgba($brown, .6);
+		text-transform: uppercase;
+	}
+
+}
+
+.badge-testimony {
+	text-align: center;
+	@include calculate(18, "font-size");
+	opacity: .5;
+}
+
+.banner-form-wrapper, .bottom-banner-wrapper {
+	position: absolute;
+	z-index: 10;
+	width: 50%;
+	h1 {
+		color: white;
+		text-align: center;
+		line-height: 60px;
+	}
+
+	.row {
+		@extend .flex;
+		@extend .v-center;
+		@extend .j-content-center;
+		form {
+			margin-bottom: unset;
+			input {
+				margin-bottom: unset;
+				border: unset;
+				border-radius: unset;
+				font-size: 18px;
+				margin-left: unset;
+			}
+
+			button {
+				background-color: $mediumseagreen;
+				border: unset;
+				color: white;
+				border-radius: unset;
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+.search-form {
+	@extend .flex;
+	@extend .v-center;
+	@extend .j-content-center;
+	height: 38px;
+	border-radius: 5px;
+}
+
+
+.looking-text {
+	height: 38px;
+	background-color: white;
+	font-size: 18px;
+}
+
+.base-button {
+	background-color: $mediumseagreen;
+	border: unset;
+	color: white;
+}
+
+.join-button {
+	font-size: 18px;
+}
