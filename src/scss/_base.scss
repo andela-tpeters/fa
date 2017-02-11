@@ -7,6 +7,10 @@ body {
 	@include calculate(1440, 'max-width');
 }
 
+.content-container {
+	@include calculate(1200, 'max-width');
+}
+
 .logo-row-container {
 	position: fixed;
 	top: 0;
@@ -32,9 +36,56 @@ body {
 	@include calculate(50, 'min-height');
 	@include calculate(65, 'margin-top');
 	@include calculate(7.5, 'padding');
-	.button {
-		@extend .ibutton;
+	.menu {
+		position: relative;
+		.button {
+			@extend .ibutton;
+			position: relative;
+			z-index: 12;
+			transition: all 0.5s;
+			&:hover {
+				color: white;
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left:  0;
+			height: 0%;
+			background-color: rgba($forestgreen, 1);
+			width: 100%;
+			z-index: 10;
+			transition: all 0.2s;
+		}
+		&:hover:before {
+			height: 50%;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left:  0;
+			height: 0%;
+			background-color: rgba($forestgreen, 1);
+			width: 100%;
+			z-index: 10;
+			transition: all 0.2s;
+		}
+
+		&:hover:after {
+			height: 50%;
+		}
 	}
+}
+
+.cat-latest-section {
+	background-color: #ececec;
+	@include calculate(500, 'min-height');
+	@include calculate(50, 'padding-top');
+	@include calculate(50, 'padding-bottom');
 }
 
 .logo {
@@ -72,6 +123,17 @@ body {
 	opacity: .8;
 	@extend .flex;
 	@extend .v-center;
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		border-color: black;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+	}
 }
 
 
