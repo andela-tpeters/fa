@@ -30,6 +30,10 @@ body {
 	border: unset;
 }
 
+.menubar-container {
+	max-width: 1500px !important;
+}
+
 .menu-wrapper {
 	@extend .flex;
 	@extend .v-center;

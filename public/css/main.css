@@ -58,6 +58,10 @@ body {
     border: unset;
 }
 
+.menubar-container {
+    max-width: 1500px !important;
+}
+
 .menu-wrapper {
     min-height: calc(0.0625em * 50);
     margin-top: calc(0.0625em * 65);
