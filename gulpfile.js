@@ -12,6 +12,7 @@ var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
 var beautify = require('gulp-cssbeautify');
 var pug = require('gulp-pug');
+var nodemon = require('gulp-nodemon');
 
 var absolutePath = function(source, folder, file = '') { 
 	if(/.min.(css|js)/.exec(file)){
@@ -101,6 +102,16 @@ gulp.task('js:watch', function() {
 	gulp.watch(absolutePath('src','js') + "*.js", ['js:build']);
 });
 
+gulp.task('nodemon', function () {
+  livereload.listen();
+  nodemon({ script: 'server.js', ext: 'js pug scss', ignore: ['public/**', 'node_modules/**'] })
+    .on('restart', ['build'], function () {
+    	setTimeout(function(){
+    		livereload.changed('server.js');
+    	}, 600);
+    });
+});
+
 
 gulp.task('build', ['sassify','minify-css', 'imagemin', 'html::pug', 'js:build']);
 
@@ -108,6 +119,6 @@ gulp.task('build:zip', ['minify-css', 'imagemin', 'js:build']);
 
 gulp.task('watch', ['sass:watch', 'pug:watch', 'js:watch'])
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'nodemon']);
 
 
