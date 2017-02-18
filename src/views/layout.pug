@@ -2,6 +2,7 @@ doctype html
 html
   head
     title Template
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     block styles
       link(href="css/normalize.css", rel="stylesheet")
       link(href="https://fonts.googleapis.com/css?family=Arsenal", rel="stylesheet")
@@ -24,6 +25,7 @@ html
           .container.menubar-container
             .row
               .twelve.columns
+                button(style='display: none') Hamburger
                 .menu-wrapper
                   .menu
                     a(href="#", class="button") Logo Deisgn
@@ -33,15 +35,18 @@ html
                     a(href="#", class="button") Copywriting
                   .menu
                     a(href="#", class="button") Translation
-                  //- .menu
-                  //-   a(href="#", class="button") Digital Marketing
-                  //- .menu
-                  //-   a(href="#", class="button") Wordpress
                   .menu
+                    a(href="#", class="button") Digital Marketing
+                  .menu.more-menu-icon
+                    a(href="#" id="more-menu-icon")
+                      .i(class="fa fa-angle-down")
+                  .menu.extra
+                    a(href="#", class="button") Wordpress
+                  .menu.extra
                     a(href="#", class="button") Website &amp; Programming
-                  .menu
+                  .menu.extra
                     a(href="#", class="button") Tech Support
-                  .menu
+                  .menu.extra
                     a(href="#", class="button") Lifestyle
 
       block content
