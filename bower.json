@@ -1,0 +1,16 @@
+{
+  "name": "ServiceMart",
+  "description": "Front End depencies for Service Mart",
+  "main": "gulpfile.js",
+  "authors": [
+    "Nwocha Adim"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "frontend"
+  ],
+  "homepage": "",
+  "dependencies": {
+    "skeleton": "2.0.4"
+  }
+}
