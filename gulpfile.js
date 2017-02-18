@@ -34,6 +34,8 @@ var htmlPartials = fs.readdirSync(absolutePath('src','views/partials')).map(func
 
 var sassFiles = fs.readdirSync(absolutePath('src', 'scss')).map(function(filename){ return  absolutePath('src','scss', filename)});
 
+var sassFiles = fs.readdirSync(absolutePath('src', 'scss')).map(function(filename){ return  absolutePath('src','scss', filename)});
+
 var jsFiles = fs.readdirSync(absolutePath('src','js')).map(function(filename){ return absolutePath('src','js',filename)});
 
 

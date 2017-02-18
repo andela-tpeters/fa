@@ -5,3 +5,4 @@ $("#more-menu-icon").click(function() {
 $('#hamburger-menu-button').click(function() {
 	$(".menu-wrapper").toggleClass('hamburger-active');
 });
+

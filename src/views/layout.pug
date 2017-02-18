@@ -28,7 +28,8 @@ html
           .container.menubar-container
             .row
               .twelve.columns
-                button(style='display: none') Hamburger
+                .hamburger-container
+                  button.button#hamburger-menu-button MENU
                 .menu-wrapper
                   .menu
                     a(href="#", class="button") Logo Deisgn
@@ -40,20 +41,16 @@ html
                     a(href="#", class="button") Translation
                   .menu
                     a(href="#", class="button") Digital Marketing
-                  .menu
-                    a(href="#", class="button") Wordpress
-                  .menu
-                    a(href="#", class="button") Digital Marketing
                   .menu.more-menu-icon
                     a(href="#" id="more-menu-icon")
                       .i(class="fa fa-angle-down")
                   .menu.extra
                     a(href="#", class="button") Wordpress
-                  .menu.extra
+                  .menu
                     a(href="#", class="button") Website &amp; Programming
-                  .menu.extra
+                  .menu
                     a(href="#", class="button") Tech Support
-                  .menu.extra
+                  .menu
                     a(href="#", class="button") Lifestyle
 
       block content
