@@ -59,13 +59,26 @@ body {
 }
 
 .menubar-container {
-    max-width: 1500px !important;
+    max-width: 1440px;
 }
 
 .menu-wrapper {
     min-height: calc(0.0625em * 50);
+    height: calc(0.0625em * 50);
     margin-top: calc(0.0625em * 65);
     padding: calc(0.0625em * 7.5);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    overflow: hidden;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.menu-wrapper:hover {
+    height: calc(0.0625em * 150);
 }
 
 .menu-wrapper .menu {
@@ -176,6 +189,12 @@ body {
     display: block;
     font-style: italic;
     word-spacing: 3px;
+}
+
+@media screen and (min-width: 1025px) {
+    .more-menu-icon {
+        display: none;
+    }
 }
 
 .banner-wrapper {
@@ -294,10 +313,13 @@ body {
     border-radius: 5px;
 }
 
+.search-form .search-container button {
+    margin-left: 0;
+}
+
 .looking-text {
     height: 38px;
     background-color: white;
-    font-size: 18px;
 }
 
 .base-button {

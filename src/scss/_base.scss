@@ -31,15 +31,24 @@ body {
 }
 
 .menubar-container {
-	max-width: 1500px !important;
+	max-width: 1440px;
 }
 
 .menu-wrapper {
 	@extend .flex;
 	@extend .v-center;
 	@include calculate(50, 'min-height');
+	@include calculate(50, 'height');
 	@include calculate(65, 'margin-top');
 	@include calculate(7.5, 'padding');
+	transition: all 1s;
+	overflow: hidden;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	&:hover {
+		@include calculate(150, 'height');
+	}
+
 	.menu {
 		position: relative;
 		.button {
@@ -148,15 +157,15 @@ body {
 	word-spacing: 3px;
 }
 
-.v-separator {
-	// @extend .border;
-	// color: black;
-	// z-index: 20px;
-	// width: 10px;
-	// position: absolute;
-	// height: 30px;
-	// top: 0;
-	// display: inline-block;
-	// transform: rotateX(80deg);
+.more-menu-icon {
+	@media screen and (min-width: 1025px) {
+		display: none;
+	}
+}
+
+.extra {
+	@media screen and (max-width: 1024px) {
+		// display: none;
+	}
 }
 

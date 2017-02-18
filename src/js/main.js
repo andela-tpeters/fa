@@ -1,4 +1,3 @@
-// $('.latest-grid').masonry({
-// 	itemSelector: '.latest-item',
-// 	columnWidth: ".three.columns"
-// })
+$("#more-menu-icon").click(function() {
+	$('.menu.extra').css('display', 'inline-block');
+});
