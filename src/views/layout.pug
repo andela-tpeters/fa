@@ -5,17 +5,19 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     block styles
       link(href="css/normalize.css", rel="stylesheet")
+      link(href="css/modal.min.css", rel="stylesheet")
       link(href="https://fonts.googleapis.com/css?family=Arsenal", rel="stylesheet")
       link(href="css/font-awesome.min.css", rel="stylesheet")
       link(href="css/skeleton.css", rel="stylesheet")
       link(href="css/main.min.css", rel="stylesheet")
   body
+    include partials/_modal.pug
     .content-margin
       header.u-full-width.row
         .logo-row-container
           .container.main-container
             .row.logo-row
-              .four.columns
+              .four.columns.mobile-three
                 .logo
                   .logo-content
                     a(href="/", style="text-decoration: none; color: black") <b>SERVICE HUB</b>
@@ -25,7 +27,8 @@ html
           .container.menubar-container
             .row
               .twelve.columns
-                button(style='display: none') Hamburger
+                .hamburger-container
+                  button.button#hamburger-menu-button MENU
                 .menu-wrapper
                   .menu
                     a(href="#", class="button") Logo Deisgn
@@ -37,23 +40,20 @@ html
                     a(href="#", class="button") Translation
                   .menu
                     a(href="#", class="button") Digital Marketing
-                  .menu.more-menu-icon
-                    a(href="#" id="more-menu-icon")
-                      .i(class="fa fa-angle-down")
-                  .menu.extra
+                  .menu
                     a(href="#", class="button") Wordpress
-                  .menu.extra
+                  .menu
                     a(href="#", class="button") Website &amp; Programming
-                  .menu.extra
+                  .menu
                     a(href="#", class="button") Tech Support
-                  .menu.extra
+                  .menu
                     a(href="#", class="button") Lifestyle
 
       block content
       footer.u-full-width.row
         .container.main-container
           .row
-            .three.columns
+            .three.columns.tablet-two
               .footer-div
                 h5
                   i(class="fa fa-signal")
@@ -63,7 +63,7 @@ html
                   li Lorem
                   li Lorem
                   li Lorem
-            .three.columns
+            .three.columns.tablet-two
               .footer-div
                 h5
                   i(class="fa fa-building")
@@ -73,7 +73,7 @@ html
                   li Lorem
                   li Lorem
                   li Lorem
-            .three.columns
+            .three.columns.tablet-two
               .footer-div
                 h5
                   i(class="fa fa-search-plus")
@@ -83,7 +83,7 @@ html
                   li Lorem
                   li Lorem
                   li Lorem
-            .three.columns
+            .three.columns.tablet-two
               .footer-div
                 h5
                   i(class="fa fa-phone")
@@ -102,6 +102,7 @@ html
     block scripts
       script(src="js/jquery-3.1.1.min.js", type="text/javascript")
       script(src="js/masonry.pkgd.js", type="text/javascript")
+      script(src="js/modal.min.js", type="text/javascript")
       script(src="js/main.min.js", type="text/javascript")
 
       

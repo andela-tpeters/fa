@@ -29,6 +29,8 @@ var imagefiles = fs.readdirSync(absolutePath('src','images')).map(function(filen
 
 var htmlFiles = fs.readdirSync(absolutePath('src','views')).map(function(filename) { return absolutePath('src','views', filename)});
 
+var htmlPartials = fs.readdirSync(absolutePath('src','views/partials')).map(function(filename) { return absolutePath('src','views/partials', filename)});
+
 var sassFiles = fs.readdirSync(absolutePath('src', 'scss')).map(function(filename){ return  absolutePath('src','scss', filename)});
 
 var cssFiles = fs.readdirSync(absolutePath('src','css')).map(function(filename){ return absolutePath('src','css',filename)});
@@ -60,7 +62,7 @@ gulp.task('minify-css', function() {
 });
 
 gulp.task('html::pug', function() {
-	return gulp.src(htmlFiles)
+	return gulp.src(htmlFiles.concat(htmlPartials))
 				.pipe(pug({}))
 				.pipe(rename(function(path) {
 					path.extname = ".html";
@@ -93,7 +95,7 @@ gulp.task('sass:watch', function() {
 
 gulp.task('pug:watch', function() {
 	livereload.listen();
-	gulp.watch(absolutePath('src','views') + "*.pug", ['html::pug']);
+	gulp.watch(absolutePath('src','views') + "**/*.pug", ['html::pug']);
 });
 
 gulp.task('js:watch', function() {
