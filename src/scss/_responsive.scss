@@ -1,0 +1,109 @@
+.search-form {
+    .search-container {
+        button {
+            @media screen and (min-width: 750px) {
+                padding: unset;
+            }
+        }
+    }
+}
+
+.tablet-four {
+    @media screen and (min-width: 750px) {
+        width: 36% !important;
+    }
+    @media screen and (min-width: 1000px) {
+        width: inherit !important;
+    }
+}
+
+.tablet-two {
+    @media screen and (min-width: 750px) and (max-width: 1024px) {
+        width: 48% !important;
+    }
+    &:nth-child(3n) {
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            margin-left: 0;
+        }
+    }
+}
+
+.mobile-three {
+    @media screen and (max-width: 550px) {
+        width: 30% !important;
+    }
+}
+
+.mobile-seven {
+    @media screen and (max-width: 550px) {
+        width: 70% !important;
+    }
+}
+
+.banner-form-wrapper,
+.bottom-banner-wrapper {
+    @media screen and (min-width: 750px) and (max-width: 1024px) {
+        width: 90%;
+        transition: all 1s;
+    }
+
+    @media screen and (max-width: 750px) {
+		width: 70%;    	
+    }
+}
+
+.banner-form-wrapper {
+	.row:nth-child(1) {
+		margin-bottom: 30px;
+		h1 {
+			small {
+				line-height: normal;
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
+
+.menu-wrapper {
+    @media screen and (max-width: 550px) {
+        transition: all 1s;
+        height: 0px;
+        min-height: 0px;
+        padding: 0px;
+        margin-top: 0px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.hamburger-active {
+	@include calculate(350, 'height');
+}
+
+.hamburger-container {
+    @extend .flex;
+    @extend .v-center;
+    @include calculate(50, 'min-height');
+    @include calculate(50, 'height');
+    @include calculate(65, 'margin-top');
+    @include calculate(7.5, 'padding');
+    transition: all 1s;
+    justify-content: space-around;
+    flex-direction: column;
+    @media screen and (min-width: 550px) {
+        display: none;
+    }
+    // button {
+    // 	@extend .flex;
+	   //  @extend .v-center;
+	   //  transition: all 1s;
+	   //  justify-content: space-around;
+	   //  flex-direction: column;
+    // }
+}
+
+.top-heading {
+	@media screen and (max-width: 550px) {
+		flex-direction: column;
+	}
+}

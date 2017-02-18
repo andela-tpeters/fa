@@ -1,0 +1,46 @@
+.modal-close-btn {
+	@extend .ibutton;
+	font-size: 18px;
+	color: white;
+}
+
+.signin-modal-header {
+	h4 {
+		color: white;
+	}
+}
+
+.signin-modal-header, .signin-button, .signup-instead {
+	background-color: $mediumseagreen;
+}
+
+.signin-button, .signup-instead {
+	@extend .ibutton;
+	color: white;
+}
+
+.signin-form {
+	input {
+		border-radius: unset;
+		border-top: unset;
+		border-right: unset;
+		border-left: unset;
+		border-color: gray;
+		border-bottom: 1px solid;
+		margin: 20px 0;
+	}
+}
+
+.forgot-password {
+	@extend .ibutton;
+}
+
+.social-login-row {
+	margin: 20px 0;
+
+	a {
+		@extend .ibutton;
+		padding: 0 15px;
+		font-size: 16px;
+	}
+}

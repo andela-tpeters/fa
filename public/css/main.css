@@ -1,10 +1,10 @@
-.flex, .menu-wrapper, .logo, .signin, .top-heading, .banner-wrapper, .banner-form-wrapper .row, .bottom-banner-wrapper .row, .search-form, .category-item {
+.flex, .menu-wrapper, .logo, .signin, .top-heading, .banner-wrapper, .banner-form-wrapper .row, .bottom-banner-wrapper .row, .search-form, .category-item, .hamburger-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-.v-center, .menu-wrapper, .logo, .signin, .top-heading, .banner-wrapper, .banner-form-wrapper .row, .bottom-banner-wrapper .row, .search-form, .category-item {
+.v-center, .menu-wrapper, .logo, .signin, .top-heading, .banner-wrapper, .banner-form-wrapper .row, .bottom-banner-wrapper .row, .search-form, .category-item, .hamburger-container {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -46,14 +46,14 @@ body {
     width: 100%;
     max-width: 100%;
     background-color: white;
-    z-index: 10000;
+    z-index: 999;
 }
 
 .menu-container {
     background-color: #ececec;
 }
 
-.ibutton, .menu-wrapper .menu .button, .signin .signin-content .button {
+.ibutton, .menu-wrapper .menu .button, .signin .signin-content .button, .modal-close-btn, .signin-button, .signup-instead, .forgot-password, .social-login-row a {
     margin-bottom: unset;
     border: unset;
 }
@@ -75,10 +75,6 @@ body {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-}
-
-.menu-wrapper:hover {
-    height: calc(0.0625em * 150);
 }
 
 .menu-wrapper .menu {
@@ -189,12 +185,6 @@ body {
     display: block;
     font-style: italic;
     word-spacing: 3px;
-}
-
-@media screen and (min-width: 1025px) {
-    .more-menu-icon {
-        display: none;
-    }
 }
 
 .banner-wrapper {
@@ -450,4 +440,158 @@ footer {
 
 .footer-div ul {
     opacity: .8;
+}
+
+@media screen and (min-width: 750px) {
+    .search-form .search-container button {
+        padding: unset;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .tablet-four {
+        width: 36% !important;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .tablet-four {
+        width: inherit !important;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+    .tablet-two {
+        width: 48% !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .tablet-two:nth-child(3n) {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mobile-three {
+        width: 30% !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mobile-seven {
+        width: 70% !important;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+    .banner-form-wrapper,
+  .bottom-banner-wrapper {
+        width: 90%;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .banner-form-wrapper,
+  .bottom-banner-wrapper {
+        width: 70%;
+    }
+}
+
+.banner-form-wrapper .row:nth-child(1) {
+    margin-bottom: 30px;
+}
+
+.banner-form-wrapper .row:nth-child(1) h1 small {
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 550px) {
+    .menu-wrapper {
+        -webkit-transition: all 1s;
+        transition: all 1s;
+        height: 0px;
+        min-height: 0px;
+        padding: 0px;
+        margin-top: 0px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    }
+}
+
+.hamburger-active {
+    height: calc(0.0625em * 350);
+}
+
+.hamburger-container {
+    min-height: calc(0.0625em * 50);
+    height: calc(0.0625em * 50);
+    margin-top: calc(0.0625em * 65);
+    padding: calc(0.0625em * 7.5);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 550px) {
+    .hamburger-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .top-heading {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.modal-close-btn {
+    font-size: 18px;
+    color: white;
+}
+
+.signin-modal-header h4 {
+    color: white;
+}
+
+.signin-modal-header, .signin-button, .signup-instead {
+    background-color: #27ae60;
+}
+
+.signin-button, .signup-instead {
+    color: white;
+}
+
+.signin-form input {
+    border-radius: unset;
+    border-top: unset;
+    border-right: unset;
+    border-left: unset;
+    border-color: gray;
+    border-bottom: 1px solid;
+    margin: 20px 0;
+}
+
+.social-login-row {
+    margin: 20px 0;
+}
+
+.social-login-row a {
+    padding: 0 15px;
+    font-size: 16px;
 }
