@@ -1,0 +1,59 @@
+#signupModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='signupModal')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header.signin-modal-header
+        .row
+          .nine.columns
+            h4#signupModal.modal-title Sign Up
+      .modal-body
+        .row
+          .three.columns &nbsp;
+          .eight.columns
+            form.twelve.columns.signin-form
+              .row
+                .two.columns
+                .one.column(style="padding-top: 18px")
+                  span
+                    i(class="fa fa-user", style="font-size: 18px;")
+                .eight.columns
+                  input.twelve.columns(type="text", placeholder="Username")
+              .row
+                .two.columns
+                .one.column(style="padding-top: 18px")
+                  span
+                    i(class="fa fa-envelope", style="font-size: 18px;")
+                .eight.columns
+                  input.twelve.columns(type="email", placeholder="Email")
+              .row
+                .two.columns
+                .one.column(style="padding-top: 18px")
+                  span
+                    i(class="fa fa-lock", style="font-size: 18px;")
+                .eight.columns
+                  input.twelve.columns(type="password", placeholder="Password")
+              .row(style="padding-top: 10px")
+                .two.columns
+                .nine.columns
+                  h2.horizontal-rule
+                    span Account Type
+                  select.twelve.columns(required)
+                    option(value="buyer") Buyer
+                    option(value="seller") Seller
+              .row(style="margin-top: 25px")
+                .two.columns
+                  span &nbsp;
+                .six.columns
+                  button.eight.columns.signin-button.twelve.columns(type="button") Sign Up
+        .row.social-login-row
+          .six.columns.u-pull-right
+            | Or Join Us With:
+            a(href="#", class="button", style="color: #002993")
+              i(class="fa fa-facebook")
+            a(href="#", class="button", style="color: #03a9f4")
+              i(class="fa fa-twitter")
+            a(href="#", class="button", style="color: #d72227")
+              i(class="fa fa-google-plus")
+
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        button.btn.btn-primary.signup-instead(type='button') Signin instead?

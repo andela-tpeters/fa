@@ -7,4 +7,9 @@
     height: 40px;
     width: 40px;
     top: 8px;
+    left: 850px;
+
+    @media screen and (max-width: 550px) {
+        left: 300px;
+    }
 }

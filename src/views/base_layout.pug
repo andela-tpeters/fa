@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Template
+    title ServiceMart
     meta(name="viewport" content="width=device-width, initial-scale=1")
     block styles
       link(href="css/normalize.css", rel="stylesheet")
@@ -14,6 +14,7 @@ html
       link(href="css/main.min.css", rel="stylesheet")
   body
     include partials/_modal.pug
+    include partials/_sign_up_modal.pug
     .content-margin
       header.u-full-width.row
         .logo-row-container
@@ -22,7 +23,7 @@ html
               .four.columns.mobile-three
                 .logo
                   .logo-content
-                    a(href="/", style="text-decoration: none; color: black") <b>SERVICE HUB</b>
+                    a(href="/", style="text-decoration: none; color: black") <b>SERVICE MART</b>
               block loggedInMenu
               
         .menu-container
@@ -42,7 +43,10 @@ html
                     a(href="#", class="button") Translation
                   .menu
                     a(href="#", class="button") Digital Marketing
-                  .menu
+                  .menu.more-menu-icon
+                    a(href="#" id="more-menu-icon")
+                      .i(class="fa fa-angle-down")
+                  .menu.extra
                     a(href="#", class="button") Wordpress
                   .menu
                     a(href="#", class="button") Website &amp; Programming
@@ -71,40 +75,33 @@ html
                   i(class="fa fa-signal")
                   | &nbsp;&nbsp;&nbsp;Discover
                 ul
-                  li Lorem
-                  li Lorem
-                  li Lorem
-                  li Lorem
+                  li How it works
+                  li Trust and Quality
+                  li Blog
             .three.columns.tablet-two
               .footer-div
                 h5
                   i(class="fa fa-building")
                   | &nbsp;&nbsp;&nbsp;Company
                 ul
-                  li Lorem
-                  li Lorem
-                  li Lorem
-                  li Lorem
+                  li About Us
+                  li Terms of service
+                  li Privacy Policy
             .three.columns.tablet-two
               .footer-div
                 h5
                   i(class="fa fa-search-plus")
                   | &nbsp;&nbsp;&nbsp;Solutions
                 ul
-                  li Lorem
-                  li Lorem
-                  li Lorem
-                  li Lorem
+                  li Enterprise Solutions
             .three.columns.tablet-two
               .footer-div
                 h5
                   i(class="fa fa-phone")
                   | &nbsp;&nbsp;&nbsp;Contact Us
                 ul
-                  li Lorem
-                  li Lorem
-                  li Lorem
-                  li Lorem
+                  li Service Mart
+                  li contact@servicemart.com
           .row.copyright-row
             .twelve.columns
               .copyright

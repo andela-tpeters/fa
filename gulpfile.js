@@ -12,6 +12,7 @@ var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
 var beautify = require('gulp-cssbeautify');
 var pug = require('gulp-pug');
+var nodemon = require('gulp-nodemon');
 
 var absolutePath = function(source, folder, file = '') { 
 	if(/.min.(css|js)/.exec(file)){
@@ -25,7 +26,7 @@ var absolutePath = function(source, folder, file = '') {
 	return path.resolve(source, folder) + "/" + file; 
 }
 
-var imagefiles = fs.readdirSync(absolutePath('src','images')).map(function(filename) { return absolutePath('src','images',filename);});
+// var imagefiles = fs.readdirSync(absolutePath('src','images')).map(function(filename) { return absolutePath('src','images',filename);});
 
 var htmlFiles = fs.readdirSync(absolutePath('src','views')).map(function(filename) { return absolutePath('src','views', filename)});
 
@@ -33,7 +34,7 @@ var htmlPartials = fs.readdirSync(absolutePath('src','views/partials')).map(func
 
 var sassFiles = fs.readdirSync(absolutePath('src', 'scss')).map(function(filename){ return  absolutePath('src','scss', filename)});
 
-var cssFiles = fs.readdirSync(absolutePath('src','css')).map(function(filename){ return absolutePath('src','css',filename)});
+var sassFiles = fs.readdirSync(absolutePath('src', 'scss')).map(function(filename){ return  absolutePath('src','scss', filename)});
 
 var jsFiles = fs.readdirSync(absolutePath('src','js')).map(function(filename){ return absolutePath('src','js',filename)});
 
@@ -103,13 +104,23 @@ gulp.task('js:watch', function() {
 	gulp.watch(absolutePath('src','js') + "*.js", ['js:build']);
 });
 
+gulp.task('nodemon', function () {
+  livereload.listen();
+  nodemon({ script: 'server.js', ext: 'js pug scss', ignore: ['public/**', 'node_modules/**'] })
+    .on('restart', ['build'], function () {
+    	setTimeout(function(){
+    		livereload.changed('server.js');
+    	}, 600);
+    });
+});
 
-gulp.task('build', ['sassify','minify-css', 'imagemin', 'html::pug', 'js:build']);
+
+gulp.task('build', ['sassify','minify-css', 'html::pug', 'js:build']);
 
 gulp.task('build:zip', ['minify-css', 'imagemin', 'js:build']);
 
 gulp.task('watch', ['sass:watch', 'pug:watch', 'js:watch'])
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'nodemon']);
 
 
