@@ -368,6 +368,11 @@ body {
     transition: all .5s;
     color: black;
     cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 196px;
+    display: inline-block;
+    text-overflow: ellipsis;
 }
 
 .caption h5 a:hover {
@@ -624,7 +629,6 @@ footer {
         border: unset;
         border-radius: unset;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        margin: 10px 0;
     }
 }
 
@@ -667,7 +671,6 @@ footer {
         border: unset;
         border-radius: unset;
         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-        margin: 10px 0;
         color: white;
     }
 }
@@ -694,6 +697,13 @@ footer {
     visibility: visible !important;
     -webkit-transform: translateX(0) !important;
     transform: translateX(0) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .tablet-container.full {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
 }
 
 .modal-close-btn {

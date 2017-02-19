@@ -30,6 +30,11 @@
 			transition: all .5s;
 			color: black;
 			cursor: pointer;
+			white-space: nowrap;
+		    overflow: hidden;
+		    width: 196px;
+		    display: inline-block;
+		    text-overflow: ellipsis;
 			&:hover {
 				color: $mediumseagreen;
 			}
