@@ -26,7 +26,7 @@ var absolutePath = function(source, folder, file = '') {
 	return path.resolve(source, folder) + "/" + file; 
 }
 
-var imagefiles = fs.readdirSync(absolutePath('src','images')).map(function(filename) { return absolutePath('src','images',filename);});
+// var imagefiles = fs.readdirSync(absolutePath('src','images')).map(function(filename) { return absolutePath('src','images',filename);});
 
 var htmlFiles = fs.readdirSync(absolutePath('src','views')).map(function(filename) { return absolutePath('src','views', filename)});
 
@@ -113,7 +113,7 @@ gulp.task('nodemon', function () {
 });
 
 
-gulp.task('build', ['sassify','minify-css', 'imagemin', 'html::pug', 'js:build']);
+gulp.task('build', ['sassify','minify-css', 'html::pug', 'js:build']);
 
 gulp.task('build:zip', ['minify-css', 'imagemin', 'js:build']);
 
