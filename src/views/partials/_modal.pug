@@ -3,9 +3,6 @@
     .modal-content
       .modal-header.signin-modal-header
         .row
-          .three.columns.u-pull-right
-            button.close.modal-close-btn(type='button', data-dismiss='modal', aria-label='Close')
-              span(aria-hidden='true') ×
           .nine.columns
             h4#signinModal.modal-title Sign In
       .modal-body
@@ -19,14 +16,14 @@
                   span
                     i(class="fa fa-user", style="font-size: 18px;")
                 .eight.columns
-                  input.twelve.columns(type="text")
+                  input.twelve.columns(type="text", placeholder="Username or Email")
               .row
                 .two.columns
                 .one.column(style="padding-top: 18px")
                   span
                     i(class="fa fa-lock", style="font-size: 18px;")
                 .eight.columns
-                  input.twelve.columns(type="password")
+                  input.twelve.columns(type="password", placeholder="Password")
               .row(style="margin-top: 25px")
                 .four.columns
                   button.signin-button.twelve.columns(type="button") Sign In

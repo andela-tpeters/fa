@@ -3,11 +3,8 @@
     .modal-content
       .modal-header.signin-modal-header
         .row
-          .three.columns.u-pull-right
-            button.close.modal-close-btn(type='button', data-dismiss='modal', aria-label='Close')
-              span(aria-hidden='true') ×
           .nine.columns
-            h4#signinModal.modal-title Sign Up
+            h4#signupModal.modal-title Sign Up
       .modal-body
         .row
           .three.columns &nbsp;
@@ -19,22 +16,37 @@
                   span
                     i(class="fa fa-user", style="font-size: 18px;")
                 .eight.columns
-                  input.twelve.columns(type="text")
+                  input.twelve.columns(type="text", placeholder="Username")
+              .row
+                .two.columns
+                .one.column(style="padding-top: 18px")
+                  span
+                    i(class="fa fa-envelope", style="font-size: 18px;")
+                .eight.columns
+                  input.twelve.columns(type="email", placeholder="Email")
               .row
                 .two.columns
                 .one.column(style="padding-top: 18px")
                   span
                     i(class="fa fa-lock", style="font-size: 18px;")
                 .eight.columns
-                  input.twelve.columns(type="password")
+                  input.twelve.columns(type="password", placeholder="Password")
+              .row(style="padding-top: 10px")
+                .two.columns
+                .nine.columns
+                  h2.horizontal-rule
+                    span Account Type
+                  select.twelve.columns(required)
+                    option(value="buyer") Buyer
+                    option(value="seller") Seller
               .row(style="margin-top: 25px")
-                .four.columns
-                  button.signin-button.twelve.columns(type="button") Sign In
-                .four.columns
-                  a(href="#", class="button forgot-password") Forgot Password?
+                .two.columns
+                  span &nbsp;
+                .six.columns
+                  button.eight.columns.signin-button.twelve.columns(type="button") Sign Up
         .row.social-login-row
           .six.columns.u-pull-right
-            | Or Login with:
+            | Or Join Us With:
             a(href="#", class="button", style="color: #002993")
               i(class="fa fa-facebook")
             a(href="#", class="button", style="color: #03a9f4")
@@ -44,4 +56,4 @@
 
       .modal-footer
         button.btn.btn-default(type='button', data-dismiss='modal') Close
-        button.btn.btn-primary.signup-instead(type='button') Signup instead?
+        button.btn.btn-primary.signup-instead(type='button') Signin instead?
