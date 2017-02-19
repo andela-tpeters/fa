@@ -7,18 +7,30 @@ block loggedInMenu
   //-       a(href="#", class="button button-signup") SignUp
   .six.columns.u-pull-right.tablet-four.mobile-seven
     div.u-pull-right.signin
-      .signin-content.member
+      .signin-content.member.mobile-member
         a(href="#", class="button")
           i(class="fa fa-bell")
-        a(href="#", class="button")
+        a(href="#", class="button t-hide")
           i(class="fa fa-comment")
-        a(href="#", class="button post-job")
+        a(href="#", class="button post-job t-hide")
           span Post a job
           i(class="fa fa-plus")
-        a(href="#", class="button")
-          i(class="fa fa-user")
+        a#mobile-menu-profile-button(href="#", class="button l-hide")
+          span(class="avatar")
+        a(href="#", class="button t-hide")
+          span(class="avatar")
           span.member-avatar John Doe
           i(class="fa fa-angle-right")
+  #mobile-member-menu.mobile-member-menu.l-hide
+    a#mobile-menu-profile-close(href="#", class="button") X Close
+    a(href="#", class="button") Dashboard
+    a(href="#", class="button") My Profile
+    a(href="#", class="button") My Orders
+    a(href="#", class="button") My Invoices
+    a(href="#", class="button") Post a Job
+    a(href="#", class="button") Message
+    a(href="#", class="button") Sign Out
+
 block content
   .row
     .twelve.columns

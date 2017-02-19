@@ -3,5 +3,17 @@ $("#more-menu-icon").click(function() {
 });
 
 $('#hamburger-menu-button').click(function() {
-	$(".menu-wrapper").toggleClass('hamburger-active');
+	$(".mobile-categories-menu").toggleClass('mobile-menu-show');
+});
+
+$('#mobile-cat-menu-close').click(function() {
+	$(".mobile-categories-menu").toggleClass('mobile-menu-show');
+});
+
+$('#mobile-menu-profile-button').click(function() {
+	$('#mobile-member-menu').toggleClass('mobile-menu-show');
+});
+
+$('#mobile-menu-profile-close').click(function() {
+	$('#mobile-member-menu').toggleClass('mobile-menu-show');
 });
