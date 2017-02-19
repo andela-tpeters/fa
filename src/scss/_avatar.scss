@@ -1,0 +1,10 @@
+.avatar {
+	display: inline-block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 50%;
+    background-image: url(http://lorempixel.com/50/50/people);
+    height: 40px;
+    width: 40px;
+    top: 8px;
+}

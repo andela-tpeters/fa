@@ -28,9 +28,9 @@ html
           .container.menubar-container
             .row
               .twelve.columns
-                .hamburger-container
-                  button.button#hamburger-menu-button MENU
-                .menu-wrapper
+                .hamburger-container.l-hide
+                  button.l-hide.button#hamburger-menu-button MENU
+                .menu-wrapper.t-hide
                   .menu
                     a(href="#", class="button") Logo Deisgn
                   .menu
@@ -52,7 +52,17 @@ html
                     a(href="#", class="button") Tech Support
                   .menu
                     a(href="#", class="button") Lifestyle
-
+      .mobile-categories-menu.l-hide
+          a#mobile-cat-menu-close(href="#", class="button") X Close
+          a(href="#", class="button") Logo Deisgn
+          a(href="#", class="button") Graphics &amp; Design
+          a(href="#", class="button") Copywriting
+          a(href="#", class="button") Translation
+          a(href="#", class="button") Digital Marketing
+          a(href="#", class="button") Wordpress
+          a(href="#", class="button") Website &amp; programming
+          a(href="#", class="button") Tech Support
+          a(href="#", class="button") Lifestyle
       block content
       footer.u-full-width.row
         .container.main-container
