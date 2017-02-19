@@ -1,10 +1,5 @@
-extends layout
+extends base_layout
 block loggedInMenu
-  //- .four.columns.u-pull-right.tablet-four.mobile-seven
-  //-   div.u-pull-right.signin
-  //-     .signin-content
-  //-       a(href="#", class="button", type='button', data-toggle='modal', data-target='#signinModal') Signin
-  //-       a(href="#", class="button button-signup") SignUp
   .six.columns.u-pull-right.tablet-four.mobile-seven
     div.u-pull-right.signin
       .signin-content.member.mobile-member
@@ -37,11 +32,7 @@ block content
       .banner-wrapper
         .banner-form-wrapper
           .row
-<<<<<<< HEAD
             h1.twelve.columns Get your stuffs done from &#8358;1000
-=======
-            h1.twelve.columns Get your stuffs done from &#8358;5 <br/>
->>>>>>> signin modal and signin form finished
               small.small-text Browse through millions of micro jobs. Choose one you trust. Pay as you go.
           .row
             form(class="ten columns search-form")
@@ -89,15 +80,9 @@ block content
                         i(class="fa fa-star")
                     .row.price-row
                       .twelve.columns
-<<<<<<< HEAD
                         span.price &#8358;1000
                 .three.columns.latest-item
                   .item-img(style="background-image: url('http://lorempixel.com/200/200/fashion')")
-=======
-                        span.price &#8358;7
-                .three.columns.latest-item.tablet-two
-                  .item-img(style="background-image: url('http://lorempixel.com/200/200/animals')")
->>>>>>> signin modal and signin form finished
                   .item-desc
                     .row
                       .twelve.columns.caption
@@ -114,13 +99,8 @@ block content
                         i(class="fa fa-star")
                     .row.price-row
                       .twelve.columns
-<<<<<<< HEAD
                         span.price &#8358;1000
-                .three.columns.latest-item
-=======
-                        span.price &#8358;7
                 .three.columns.latest-item.tablet-two
->>>>>>> signin modal and signin form finished
                   .item-img(style="background-image: url('http://lorempixel.com/200/200/nature')")
                   .item-desc
                     .row
@@ -138,13 +118,8 @@ block content
                         i(class="fa fa-star")
                     .row.price-row
                       .twelve.columns
-<<<<<<< HEAD
                         span.price &#8358;1000
-                .three.columns.latest-item
-=======
-                        span.price &#8358;7
                 .three.columns.latest-item.tablet-two
->>>>>>> signin modal and signin form finished
                   .item-img(style="background-image: url('http://lorempixel.com/200/200/business')")
                   .item-desc
                     .row
@@ -162,11 +137,7 @@ block content
                         i(class="fa fa-star")
                     .row.price-row
                       .twelve.columns
-<<<<<<< HEAD
                         span.price &#8358;1000
-=======
-                        span.price &#8358;7
->>>>>>> signin modal and signin form finished
               .row.latest-grid
                 .three.columns.latest-item.tablet-two
                   .item-img(style="background-image: url('http://lorempixel.com/200/200/nightlife')")
@@ -186,13 +157,8 @@ block content
                         i(class="fa fa-star")
                     .row.price-row
                       .twelve.columns
-<<<<<<< HEAD
                         span.price &#8358;1000
-                .three.columns.latest-item
-=======
-                        span.price &#8358;7
                 .three.columns.latest-item.tablet-two
->>>>>>> signin modal and signin form finished
                   .item-img(style="background-image: url('http://lorempixel.com/200/200/city')")
                   .item-desc
                     .row
@@ -210,13 +176,8 @@ block content
                         i(class="fa fa-star")
                     .row.price-row
                       .twelve.columns
-<<<<<<< HEAD
                         span.price &#8358;1000
-                .three.columns.latest-item
-=======
-                        span.price &#8358;7
                 .three.columns.latest-item.tablet-two
->>>>>>> signin modal and signin form finished
                   .item-img(style="background-image: url('http://lorempixel.com/200/200/fashion')")
                   .item-desc
                     .row
@@ -234,13 +195,8 @@ block content
                         i(class="fa fa-star")
                     .row.price-row
                       .twelve.columns
-<<<<<<< HEAD
                         span.price &#8358;1000
-                .three.columns.latest-item
-=======
-                        span.price &#8358;7
                 .three.columns.latest-item.tablet-two
->>>>>>> signin modal and signin form finished
                   .item-img(style="background-image: url('http://lorempixel.com/200/200/sports')")
                   .item-desc
                     .row
@@ -258,11 +214,7 @@ block content
                         i(class="fa fa-star")
                     .row.price-row
                       .twelve.columns
-<<<<<<< HEAD
                         span.price &#8358;1000
-=======
-                        span.price &#8358;7
->>>>>>> signin modal and signin form finished
   .row
     .twelve.columns
       .company-summary
@@ -301,24 +253,6 @@ block content
           .row
             .twelve.columns
               .row.categories-grid
-<<<<<<< HEAD
-                .three.columns.category-item(title="Logo Design", style="background-image: url('http://lorempixel.com/255/255/abstract')")
-                  a.item-text(href="#") Logo Design
-                .three.columns.category-item(title="Graphics & Design", style="background-image: url('http://lorempixel.com/255/255/business')")
-                  a.item-text(href="#") Graphic &amp; Design
-                .three.columns.category-item(title="Copywriting", style="background-image: url('http://lorempixel.com/255/255/nature')")
-                  a.item-text(href="#") Copywriting
-                .three.columns.category-item(title="Translation", style="background-image: url('http://lorempixel.com/255/255/fashion')")
-                  a.item-text(href="#") Translation
-              .row.categories-grid
-                .three.columns.category-item(title="Digital Marketing", style="background-image: url('http://lorempixel.com/255/255/transport')")
-                  a.item-text(href="#") Digital Marketing
-                .three.columns.category-item(title="Wordpress", style="background-image: url('http://lorempixel.com/255/255/nightlife')")
-                  a.item-text(href="#") Wordpress
-                .three.columns.category-item(title="Website & Programming", style="background-image: url('http://lorempixel.com/255/255/abstract')")
-                  a.item-text(href="#") Website &amp; <br > Programming
-                .three.columns.category-item(title="Lifestyle", style="background-image: url('http://lorempixel.com/255/255/city')")
-=======
                 .three.columns.category-item.tablet-two(title="Logo Design", style="background-image: url('http://lorempixel.com/255/255/sports')")
                   a.item-text(href="#") Logo Design
                 .three.columns.category-item.tablet-two(title="Graphics & Design", style="background-image: url('http://lorempixel.com/255/255/people')")
@@ -335,7 +269,6 @@ block content
                 .three.columns.category-item.tablet-two(title="Website & Programming", style="background-image: url('http://lorempixel.com/255/255/business/')")
                   a.item-text(href="#") Website &amp; <br > Programming
                 .three.columns.category-item.tablet-two(title="Lifestyle", style="background-image: url('http://lorempixel.com/255/255/cats')")
->>>>>>> signin modal and signin form finished
                   a.item-text(href="#") Lifstyle
   .row
     .twelve.columns
@@ -360,7 +293,3 @@ block content
           .row
             .eight.columns.flex.v-center.j-content-center
               button(class="button columns base-button join-button") Be a member today
-<<<<<<< HEAD
-=======
-
->>>>>>> signin modal and signin form finished

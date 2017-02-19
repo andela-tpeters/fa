@@ -18,3 +18,15 @@
     border: 1px solid;
 }
 
+.relative {
+	position: relative !important;
+}
+
+.absolute {
+	position: absolute !important;
+}
+
+.active-button {
+	top: 10px;
+	right: 10px;
+}
