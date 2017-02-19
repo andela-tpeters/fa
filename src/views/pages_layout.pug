@@ -1,0 +1,16 @@
+extends base_layout
+block content
+  .container.main-container
+    .row
+      block subTopHeader
+    .row
+      .three.columns
+        block sidebar
+      .nine.columns
+        block contentArea
+block loggedInMenu
+  .four.columns.u-pull-right.tablet-four.mobile-seven
+    div.u-pull-right.signin
+      .signin-content
+        a(href="#", class="button", type='button', data-toggle='modal', data-target='#signinModal') Signin
+        a(href="#", class="button button-signup") SignUp

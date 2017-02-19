@@ -45,9 +45,6 @@ body {
 	overflow: hidden;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	&:hover {
-		// @include calculate(150, 'height');
-	}
 
 	.menu {
 		position: relative;

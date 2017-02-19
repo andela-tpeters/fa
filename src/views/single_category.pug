@@ -1,0 +1,216 @@
+extends pages_layout
+block subTopHeader
+  .twelve.columns
+    .row.category-main-header.flex.v-center(style="flex-wrap: wrap")
+      .nine.columns
+        .row.category-page-header.flex.v-center
+          .twelve-columns
+            h4 5 SEARCH RESULTS IN TECH SUPPORT
+      hr.l-hide
+      .three.columns
+        .row.sort-form.flex.v-center
+          label.three.columns(for="sort_params") Sort By: &nbsp;&nbsp;
+          select.nine.columns(name="sort_params", id="sort_params")
+            option(value="new") New
+            option(value="high_rating") High Rating
+    hr
+block sidebar
+  .t-hide
+    h4 Categories
+    a.btn.btn-primary(id="trial",role='button', data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
+      | Link with href
+    #collapseExample.collapse
+      .well
+        | This is the well
+block contentArea
+  .row
+    .twelve.columns
+      .row
+        .twelve.columns
+          .row.latest-grid
+            .four.columns.latest-item.tablet-two.relative
+              .item-img(style="background-image: url('http://lorempixel.com/200/200/abstract')")
+              .item-desc
+                .row
+                  .twelve.columns.caption
+                    h5
+                      a(href="#") Lorem Ipsum
+                .row.author-row
+                  .six.columns.author-name
+                    | Lorem Author
+                  .six.columns.author-rating
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                .row.price-row
+                  .twelve.columns
+                    span.price &#8358;7
+                    button.button.button-primary.absolute.active-button Active
+            .four.columns.latest-item.tablet-two.relative
+              .item-img(style="background-image: url('http://lorempixel.com/200/200/animals')")
+              .item-desc
+                .row
+                  .twelve.columns.caption
+                    h5
+                      a(href="#") Lorem Ipsum
+                .row.author-row
+                  .six.columns.author-name
+                    | Lorem Author
+                  .six.columns.author-rating
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                .row.price-row
+                  .twelve.columns
+                    span.price &#8358;7
+                    button.button.button-primary.absolute.active-button Active
+            .four.columns.latest-item.tablet-two.relative
+              .item-img(style="background-image: url('http://lorempixel.com/200/200/nature')")
+              .item-desc
+                .row
+                  .twelve.columns.caption
+                    h5
+                      a(href="#") Lorem Ipsum
+                .row.author-row
+                  .six.columns.author-name
+                    | Lorem Author
+                  .six.columns.author-rating
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                .row.price-row
+                  .twelve.columns
+                    span.price &#8358;7
+                    button.button.button-primary.absolute.active-button Active
+          .row.latest-grid
+            .four.columns.latest-item.tablet-two.relative
+              .item-img(style="background-image: url('http://lorempixel.com/200/200/business')")
+              .item-desc
+                .row
+                  .twelve.columns.caption
+                    h5
+                      a(href="#") Lorem Ipsum
+                .row.author-row
+                  .six.columns.author-name
+                    | Lorem Author
+                  .six.columns.author-rating
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                .row.price-row
+                  .twelve.columns
+                    span.price &#8358;7
+                    button.button.button-primary.absolute.active-button Active
+            .four.columns.latest-item.tablet-two.relative
+              .item-img(style="background-image: url('http://lorempixel.com/200/200/nightlife')")
+              .item-desc
+                .row
+                  .twelve.columns.caption
+                    h5
+                      a(href="#") Lorem Ipsum
+                .row.author-row
+                  .six.columns.author-name
+                    | Lorem Author
+                  .six.columns.author-rating
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                .row.price-row
+                  .twelve.columns
+                    span.price &#8358;7
+                    button.button.button-primary.absolute.active-button Active
+            .four.columns.latest-item.tablet-two.relative
+              .item-img(style="background-image: url('http://lorempixel.com/200/200/city')")
+              .item-desc
+                .row
+                  .twelve.columns.caption
+                    h5
+                      a(href="#") Lorem Ipsum
+                .row.author-row
+                  .six.columns.author-name
+                    | Lorem Author
+                  .six.columns.author-rating
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                .row.price-row
+                  .twelve.columns
+                    span.price &#8358;7
+                    button.button.button-primary.absolute.active-button Active
+          .row.latest-grid
+            .four.columns.latest-item.tablet-two.relative
+              .item-img(style="background-image: url('http://lorempixel.com/200/200/fashion')")
+              .item-desc
+                .row
+                  .twelve.columns.caption
+                    h5
+                      a(href="#") Lorem Ipsum
+                .row.author-row
+                  .six.columns.author-name
+                    | Lorem Author
+                  .six.columns.author-rating
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                .row.price-row
+                  .twelve.columns
+                    span.price &#8358;7
+                    button.button.button-primary.absolute.active-button Active
+            .four.columns.latest-item.tablet-two.relative
+              .item-img(style="background-image: url('http://lorempixel.com/200/200/sports')")
+              .item-desc
+                .row
+                  .twelve.columns.caption
+                    h5
+                      a(href="#") Lorem Ipsum
+                .row.author-row
+                  .six.columns.author-name
+                    | Lorem Author
+                  .six.columns.author-rating
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                    i(class="fa fa-star")
+                .row.price-row
+                  .twelve.columns
+                    span.price &#8358;7
+                    button.button.button-primary.absolute.active-button Active
+
+    
+  
+  hr
+  .row.pagination-row.flex.v-center
+    .twelve.columns
+      nav(aria-label='Page navigation')
+        ul.pagination
+          li
+            a(href='#', aria-label='Previous')
+              span(aria-hidden='true') «
+          li
+            a(href='#') 1
+          li
+            a(href='#') 2
+          li
+            a(href='#') 3
+          li
+            a(href='#') 4
+          li
+            a(href='#') 5
+          li
+            a(href='#', aria-label='Next')
+              span(aria-hidden='true') »

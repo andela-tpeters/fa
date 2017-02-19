@@ -17,3 +17,5 @@ $('#mobile-menu-profile-button').click(function() {
 $('#mobile-menu-profile-close').click(function() {
 	$('#mobile-member-menu').toggleClass('mobile-menu-show');
 });
+
+$('#trial').collapse();
