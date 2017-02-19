@@ -200,8 +200,14 @@ body {
     word-spacing: 3px;
 }
 
+@media screen and (min-width: 1025px) {
+    .more-menu-icon {
+        display: none;
+    }
+}
+
 .banner-wrapper {
-    background-image: url("http://lorempixel.com/1440/500/technics");
+    background-image: url("https://cdn.enginethemes.com/microjobengine/sites/2/5.jpg");
     min-height: calc(0.0625em * 500);
     background-size: cover;
     background-repeat: no-repeat;
@@ -726,6 +732,20 @@ footer {
     font-size: 16px;
 }
 
+h2.horizontal-rule {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+}
+
+h2.horizontal-rule span {
+    background: #fff;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
 .avatar {
     display: inline-block;
     box-sizing: border-box;
@@ -735,4 +755,11 @@ footer {
     height: 40px;
     width: 40px;
     top: 8px;
+    left: 850px;
+}
+
+@media screen and (max-width: 550px) {
+    .avatar {
+        left: 300px;
+    }
 }
