@@ -17,11 +17,19 @@ block subTopHeader
 block sidebar
   .t-hide
     h4 Categories
-    a.btn.btn-primary(id="trial",role='button', data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
-      | Link with href
+    a.button(id="trial",role='button', data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample')
+      | Web Design
     #collapseExample.collapse
       .well
         | This is the well
+    .mobile-member-menu(style="display: block")
+      a(href="#", class="button") Dashboard
+      a(href="#", class="button") My Profile
+      a(href="#", class="button") My Orders
+      a(href="#", class="button") My Invoices
+      a(href="#", class="button") Post a Job
+      a(href="#", class="button") Message
+      a(href="#", class="button") Sign Out
 block contentArea
   .row
     .twelve.columns
