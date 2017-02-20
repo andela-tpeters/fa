@@ -14,8 +14,16 @@
     justify-content: flex-end;
 }
 
+.j-content-start {
+    justify-content: flex-end;
+}
+
 .border {
     border: 1px solid;
+}
+
+.column-direction {
+	flex-direction: column;
 }
 
 .relative {

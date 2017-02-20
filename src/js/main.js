@@ -18,4 +18,4 @@ $('#mobile-menu-profile-close').click(function() {
 	$('#mobile-member-menu').toggleClass('mobile-menu-show');
 });
 
-$('#trial').collapse();
+$('#trial').collapse('toggle');

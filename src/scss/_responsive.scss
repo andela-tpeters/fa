@@ -39,7 +39,12 @@
         width: 30% !important;
     }
 }
-
+.mobile-center {
+    @media screen and (max-width: 768px) {
+        text-align: center;
+        justify-content: center;
+    }
+}
 .mobile-seven {
     @media screen and (max-width: 550px) {
         width: 70% !important;
@@ -90,7 +95,6 @@
     @extend .flex;
     @extend .v-center;
     @include calculate(50, 'min-height');
-    // @include calculate(50, 'height');
     @include calculate(65, 'margin-top');
     @include calculate(7.5, 'padding');
     transition: all 1s;

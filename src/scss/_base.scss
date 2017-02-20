@@ -38,7 +38,7 @@ body {
 	@extend .flex;
 	@extend .v-center;
 	@include calculate(50, 'min-height');
-	@include calculate(50, 'height');
+	@include calculate(60, 'height');
 	@include calculate(65, 'margin-top');
 	@include calculate(7.5, 'padding');
 	transition: all 1s;
@@ -88,6 +88,10 @@ body {
 		&:hover:after {
 			height: 50%;
 		}
+	}
+
+	&:hover {
+		height: initial;
 	}
 }
 
@@ -154,14 +158,6 @@ body {
 	word-spacing: 3px;
 }
 
-.more-menu-icon {
-	@media screen and (min-width: 1025px) {
-		display: none;
-	}
-}
-
-.extra {
-	@media screen and (max-width: 1024px) {
-		// display: none;
-	}
+.green-button-basic {
+	border-color: $mediumseagreen;
 }
