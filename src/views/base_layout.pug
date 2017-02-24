@@ -6,15 +6,14 @@ html
     block styles
       link(href="css/normalize.css", rel="stylesheet")
       link(href="css/modal.min.css", rel="stylesheet")
+      link(href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css",rel="stylesheet")
       link(href="css/collapse.min.css", rel="stylesheet")
       link(href="css/pagination.min.css", rel="stylesheet")
-      link(href="selectize/dist/css/selectize.default.css", rel='stylesheet')
       link(href="https://fonts.googleapis.com/css?family=Arsenal", rel="stylesheet")
       link(href="css/font-awesome.min.css", rel="stylesheet")
       link(href="css/skeleton.css", rel="stylesheet")
       link(href="css/main.min.css", rel="stylesheet")
       script(src="js/jquery-3.1.1.min.js", type="text/javascript")
-      script(src="selectize/dist/js/standalone/selectize.js", type="type/javascript")
   body
     include partials/_modal.pug
     include partials/_sign_up_modal.pug
@@ -113,8 +112,7 @@ html
 
     block scripts
       script(src="js/masonry.pkgd.js", type="text/javascript")
-      //- script(src="microplugin/src/microplugin.js", type="text/javascript")
-      //- script(src="sifter/sifter.min.js", type="text/javascript")
+      script(src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/js/jquery-editable-poshytip.min.js")
       script(src="js/modal.min.js", type="text/javascript")
       script(src="js/collapse.min.js", type="text/javascript")
       script(src="js/main.min.js", type="text/javascript")
