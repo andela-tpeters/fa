@@ -22,8 +22,21 @@
     justify-content: flex-end;
 }
 
+.j-content-start {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
 .border {
     border: 1px solid;
+}
+
+.column-direction {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .relative {
@@ -77,7 +90,7 @@ body {
 
 .menu-wrapper {
     min-height: calc(0.0625em * 50);
-    height: calc(0.0625em * 50);
+    height: calc(0.0625em * 60);
     margin-top: calc(0.0625em * 65);
     padding: calc(0.0625em * 7.5);
     -webkit-transition: all 1s;
@@ -137,6 +150,10 @@ body {
 
 .menu-wrapper .menu:hover:after {
     height: 50%;
+}
+
+.menu-wrapper:hover {
+    height: 150px;
 }
 
 .cat-latest-section, .latest, .categories {
@@ -200,10 +217,21 @@ body {
     word-spacing: 3px;
 }
 
-@media screen and (min-width: 1025px) {
-    .more-menu-icon {
-        display: none;
-    }
+.florescent-shadow, .latest-item, .category-item {
+    background-color: white;
+    box-shadow: 2px 5px 43px rgba(188, 207, 219, 0.65);
+}
+
+.green-button-basic {
+    border-color: #27ae60;
+}
+
+.normal-hr {
+    margin-top: 10px !important;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 .banner-wrapper {
@@ -344,8 +372,6 @@ body {
 .latest-item, .category-item {
     min-height: calc(0.0625em * 340);
     margin-bottom: calc(0.0625em * 20);
-    background-color: white;
-    box-shadow: 2px 5px 43px rgba(188, 207, 219, 0.65);
     border-radius: 4px;
 }
 
@@ -455,6 +481,7 @@ footer {
     padding-top: calc(0.0625em * 40);
     padding-bottom: calc(0.0625em * 40);
     background-color: black;
+    margin-top: calc(0.0625em * 100);
 }
 
 .footer-div {
@@ -509,6 +536,15 @@ footer {
 @media screen and (max-width: 550px) {
     .mobile-three {
         width: 30% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-center {
+        text-align: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
     }
 }
 
@@ -772,4 +808,84 @@ h2.horizontal-rule span {
     .avatar {
         left: 300px;
     }
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px;
+    background-image: url(http://lorempixel.com/50/50/people);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile {
+    padding-bottom: 30px;
+}
+
+.profile .email {
+    font-size: 13px;
+    opacity: .5;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.profile .name {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.green-divider {
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(left, #0c6130, #27ae60);
+    background: linear-gradient(to right, #0c6130, #27ae60);
+    margin: 1.5em 0;
+}
+
+.profile-row {
+    margin-bottom: 30px;
+}
+
+.profile-info-section {
+    padding: 20px;
+}
+
+.profile-info-section .profile-info-heading {
+    text-transform: uppercase;
+    opacity: .6;
+    padding: 0 10px;
+}
+
+.profile-info-section .profile-info-description {
+    padding: 0 20px;
+}
+
+.profile-info-section .profile-info-description p {
+    opacity: .8;
+}
+
+.profile-info-section .profile-info-description .socials .button:nth-child(1) {
+    margin-left: 0;
+}
+
+.profile-info-section .profile-info-description .socials .button {
+    margin-left: 10px;
+}
+
+.profile-info-section .profile-info-description .socials .fb {
+    color: #3b5998;
+    border-color: #3b5998;
+}
+
+.profile-info-section .profile-info-description .socials .gp {
+    color: #ea4335;
+    border-color: #ea4335;
+}
+
+.profile-info-section .profile-info-description .socials .tw {
+    color: #68c5ef;
+    border-color: #68c5ef;
 }

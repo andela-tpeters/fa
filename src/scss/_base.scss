@@ -91,7 +91,7 @@ body {
 	}
 
 	&:hover {
-		height: initial;
+		height: 150px;
 	}
 }
 
@@ -158,6 +158,19 @@ body {
 	word-spacing: 3px;
 }
 
+.florescent-shadow {
+	background-color: white;
+	box-shadow: 2px 5px 43px rgba(188, 207, 219, 0.65);
+}
+
 .green-button-basic {
 	border-color: $mediumseagreen;
+}
+
+.normal-hr {
+	margin-top: 10px !important;
+}
+
+.no-margin {
+	margin: 0;
 }

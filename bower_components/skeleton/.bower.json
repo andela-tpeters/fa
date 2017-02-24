@@ -25,7 +25,6 @@
     "commit": "88f03612b05f093e3f235ced77cf89d3a8fcf846"
   },
   "_source": "https://github.com/dhgamache/Skeleton.git",
-  "_target": "^2.0.4",
-  "_originalSource": "skeleton",
-  "_direct": true
+  "_target": "2.0.4",
+  "_originalSource": "skeleton"
 }

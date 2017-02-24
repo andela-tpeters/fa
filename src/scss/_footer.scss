@@ -3,6 +3,7 @@ footer {
 	@include calculate(40, 'padding-top');
 	@include calculate(40, 'padding-bottom');
 	background-color: black;
+	@include calculate(100, 'margin-top');
 }
 
 .footer-div {

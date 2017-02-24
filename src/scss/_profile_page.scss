@@ -1,0 +1,76 @@
+.profile-picture {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 20px;
+	background-image: url(http://lorempixel.com/50/50/people);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.profile {
+	padding-bottom: 30px;
+	.email {
+		font-size: 13px;
+		opacity: .5;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+	.name {
+		margin-top: 5px;
+		margin-bottom: 0;
+	}
+}
+
+.green-divider {
+	display: block;
+	height: 4px;
+	background: linear-gradient(to right, $forestgreen, $mediumseagreen);
+	margin: 1.5em 0;
+}
+
+.profile-row {
+	margin-bottom: 30px;
+}
+
+.profile-info-section {
+	padding: 20px;
+	.profile-info-heading {
+		text-transform: uppercase;
+		opacity: .6;
+		padding: 0 10px;
+	}
+
+	.profile-info-description {
+		padding: 0 20px;
+		p {
+			opacity: .8;
+		}
+
+		.socials {
+			.button:nth-child(1) {
+				margin-left: 0;
+			}
+
+			.button {
+				margin-left: 10px;
+			}
+
+			.fb {
+				color: #3b5998;
+				border-color: #3b5998;
+			}
+
+			.gp {
+				color: #ea4335;
+				border-color: #ea4335;
+			}
+
+			.tw {
+				color: #68c5ef;
+				border-color: #68c5ef;
+			}
+		}
+	}
+}

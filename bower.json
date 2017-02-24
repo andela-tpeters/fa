@@ -11,6 +11,7 @@
   ],
   "homepage": "",
   "dependencies": {
-    "skeleton": "2.0.4"
+    "skeleton": "2.0.4",
+    "selectize": "selectize.js#^0.12.4"
   }
 }
