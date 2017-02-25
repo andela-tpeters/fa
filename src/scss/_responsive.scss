@@ -51,6 +51,14 @@
     }
 }
 
+.mobile-pull-right {
+    @media screen and (max-width: 550px) {
+        display: flex;
+        padding-right: 20px;
+        justify-content: flex-end;
+    }
+}
+
 .banner-form-wrapper,
 .bottom-banner-wrapper {
     @media screen and (min-width: 750px) and (max-width: 1024px) {
@@ -197,5 +205,12 @@
     @media screen and (max-width: 768px) {
         width: 100% !important;
         margin-left: 0 !important;
+    }
+}
+
+.sellers-profile-product-link {
+    @media screen and (max-width: 550px) {
+        display: inline-block;
+        padding-left: 20px !important;
     }
 }

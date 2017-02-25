@@ -12,7 +12,7 @@ block sidebar
     .twelve.columns.florescent-shadow
       .row.flex.v-center.column-direction
         .profile-picture
-        .profile.ten.columns.flex.column-direction.j-content-center.v-center
+        .profile.ten.columns.flex.column-direction.j-content-center.v-center.mobile-seven
           h5.name John Doe
           h6.email johndoe@example.com
           span
@@ -50,15 +50,15 @@ block contentArea
       while data <= 10
         - url = "http://lorempixel.com/200/200/" + types[data]
         .row.sellers-profile-product-container.florescent-shadow
-          .four.columns(style="height: inherit")
-            a(href="#", style="height: inherit")
+          .four.columns
+            a(href="#", style="min-height: 200px")
               .sellers-profile-product-image.u-full-width(style=`background-image: url(${url});`)
           .eight.columns
-            .row
-               .twelve.columns 
+            .row.flex.v-center.j-content-start
+               .twelve.columns
                  a.sellers-profile-product-link(href="#")
                    h6.sellers-profile-product-description This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product
-            .row
+            .row.flex.j-content-start
               .eight.columns
                 span.sellers-profile-product-stars
                   i.fa.fa-star
@@ -68,7 +68,7 @@ block contentArea
                   i.fa.fa-star
               .four.columns
                 .price-row
-                  div
+                  .mobile-pull-right
                     p.price &#8358; 1000
 
         - data++

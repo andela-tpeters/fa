@@ -23,9 +23,9 @@
 }
 
 .j-content-start {
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
 }
 
 .border {
@@ -554,6 +554,18 @@ footer {
     }
 }
 
+@media screen and (max-width: 550px) {
+    .mobile-pull-right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding-right: 20px;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+}
+
 @media screen and (min-width: 750px) and (max-width: 1024px) {
     .banner-form-wrapper,
   .bottom-banner-wrapper {
@@ -742,6 +754,13 @@ footer {
     }
 }
 
+@media screen and (max-width: 550px) {
+    .sellers-profile-product-link {
+        display: inline-block;
+        padding-left: 20px !important;
+    }
+}
+
 .modal-close-btn {
     font-size: 18px;
     color: white;
@@ -891,7 +910,6 @@ h2.horizontal-rule span {
 }
 
 .sellers-profile-product-container {
-    height: calc(0.0625em * 200);
     margin-top: calc(0.0625em * 20);
 }
 
@@ -903,7 +921,7 @@ h2.horizontal-rule span {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: inherit;
+    min-height: 200px;
 }
 
 .sellers-profile-product-description {
@@ -934,4 +952,19 @@ h2.horizontal-rule span {
 .sellers-profile-bio-show {
     height: initial !important;
     overflow: visible !important;
+}
+
+.sellers-profile-product-stars {
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.sellers-profile-product-stars i {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.sellers-profile-product-stars i:first-child {
+    padding: 0;
 }
