@@ -29,5 +29,9 @@ $(document).ready(function() {
     $('#profile-info-budiness-name').editable({inputclass: 'twelve columns'});
     $('#profile-info-budiness-address').editable({inputclass: 'twelve columns'});
     $('#profile-info-budiness-tax').editable({inputclass: 'twelve columns'});
-    $('#profile-name').editable({inputclass: 'twelve columns'});
+    $('#profile-name').editable({inputclass: 'eight columns'});
+});
+
+$('#profile-show-more-button').click(function() {
+    $('#sellers-profile-bio').toggleClass('sellers-profile-bio-show');
 });

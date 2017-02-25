@@ -889,3 +889,49 @@ h2.horizontal-rule span {
     color: #68c5ef;
     border-color: #68c5ef;
 }
+
+.sellers-profile-product-container {
+    height: calc(0.0625em * 200);
+    margin-top: calc(0.0625em * 20);
+}
+
+.sellers-profile-product-container:first-child {
+    margin-top: 0;
+}
+
+.sellers-profile-product-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: inherit;
+}
+
+.sellers-profile-product-description {
+    max-height: calc(0.0625em * 95);
+    padding-top: calc(0.0625em * 10);
+    padding-right: calc(0.0625em * 30);
+    padding-bottom: calc(0.0625em * 10);
+    color: black;
+    overflow: hidden;
+}
+
+.sellers-profile-product-description:hover {
+    text-decoration: none;
+    opacity: .5;
+}
+
+.sellers-profile-product-link:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+#sellers-profile-bio {
+    min-height: 100px;
+    height: 120px;
+    overflow: hidden;
+}
+
+.sellers-profile-bio-show {
+    height: initial !important;
+    overflow: visible !important;
+}

@@ -11,6 +11,7 @@ app.get('/', function(req, res) { res.sendFile(__dirname + '/public/homepage.htm
 app.get('/member', function(req, res) { res.sendFile(__dirname + '/public/member.html'); });
 app.get('/categories', function(req, res) { res.sendFile(__dirname + '/public/single_category.html'); });
 app.get('/profile', function(req, res) { res.sendFile(__dirname + '/public/profile_page.html'); });
+app.get('/sellers', function(req, res) { res.sendFile(__dirname + '/public/sellers_profile.html'); });
 
 app.listen(port, function() { console.log("I am listening at: " + port); });
 

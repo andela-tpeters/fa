@@ -1,0 +1,76 @@
+extends pages_layout
+block subTopHeader
+  .twelve.columns
+    .row.category-main-header.flex.v-center(style="flex-wrap: wrap")
+      .twelve.columns.tablet-container.full
+        .row.category-page-header.flex.v-center
+          .twelve.columns.mobile-center
+            h4 JOHN DOE's PROFILE
+        hr.normal-hr
+block sidebar
+  .row.profile-row
+    .twelve.columns.florescent-shadow
+      .row.flex.v-center.column-direction
+        .profile-picture
+        .profile.ten.columns.flex.column-direction.j-content-center.v-center
+          h5.name John Doe
+          h6.email johndoe@example.com
+          span
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+          span.green-divider.four.columns
+          p.ten.columns
+            i(class="fa fa-map-marker", style="font-size: 19px;")
+            | &nbsp;&nbsp;&nbsp;From
+            span.u-pull-right Great Britain
+          p.ten.columns
+            i(class="fa fa-globe", style="font-size: 19px;")
+            | &nbsp;&nbsp;&nbsp;Languages
+            span.u-pull-right English
+          .ten.columns
+            .twelve.columns
+              i(class="fa fa-info", style="font-size: 19px;")
+              | &nbsp;&nbsp;&nbsp;Bio
+              hr
+              p#sellers-profile-bio
+                | I am a logo designer, web &amp; mobile designer, illustrator, or do any design you ask me to. I am here to rock your world with profesisonal mJobs. Check them out! ;) Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              button.button#profile-show-more-button Show More
+          hr
+          p
+            a.button.button-primary(href="#") Contact Me <i class="fa fa-chat"></i>
+
+block contentArea
+  .row
+    .twelve.columns.flex.column-direction
+      - data = 1
+      - types = ['', 'sports', 'people', 'abstract', 'food', 'nature', 'transport', 'animals', 'business', 'cats', 'nightlife']
+      while data <= 10
+        - url = "http://lorempixel.com/200/200/" + types[data]
+        .row.sellers-profile-product-container.florescent-shadow
+          .four.columns(style="height: inherit")
+            a(href="#", style="height: inherit")
+              .sellers-profile-product-image.u-full-width(style=`background-image: url(${url});`)
+          .eight.columns
+            .row
+               .twelve.columns 
+                 a.sellers-profile-product-link(href="#")
+                   h6.sellers-profile-product-description This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product This is the description of the product
+            .row
+              .eight.columns
+                span.sellers-profile-product-stars
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+              .four.columns
+                .price-row
+                  div
+                    p.price &#8358; 1000
+
+        - data++
+      hr
+      button.button.twelve.columns Load More

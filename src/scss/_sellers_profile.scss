@@ -1,0 +1,47 @@
+.sellers-profile-product-container {
+	@include calculate(200, 'height');
+	@include calculate(20, 'margin-top');
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.sellers-profile-product-image {
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 background-position: center;
+	 height: inherit
+}
+
+.sellers-profile-product-description {
+	@include calculate(95, 'max-height');
+	@include calculate(10, 'padding-top');
+	@include calculate(30, 'padding-right');
+	@include calculate(10, 'padding-bottom');
+	color: black;
+	overflow: hidden;
+
+	&:hover {
+		text-decoration: none;
+		opacity: .5;
+	}
+}
+
+.sellers-profile-product-link {
+	&:hover {
+		text-decoration: none;
+		color: gray;
+	}
+}
+
+#sellers-profile-bio {
+	min-height: 100px;
+	height: 120px;
+	overflow: hidden
+}
+
+.sellers-profile-bio-show {
+	height: initial !important;
+	overflow: visible !important;
+}
