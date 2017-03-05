@@ -174,3 +174,32 @@ body {
 .no-margin {
 	margin: 0;
 }
+
+.white-text {
+	color: white;
+}
+
+.late-button {
+	background-color: red;
+	border: unset;
+}
+
+.resolved-button {
+	background-color: #5D8635;
+	border: unset;
+}
+
+.disputing-button {
+	background-color: #3B567B;
+	border: unset;
+}
+
+.active-task-button {
+	background-color: #00CCBB;
+	border: unset;
+}
+
+.finished-button {
+	background-color: $mediumseagreen;
+	border: unset;
+}

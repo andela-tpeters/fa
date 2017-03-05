@@ -1,0 +1,91 @@
+extends pages_layout
+block subTopHeader
+  .twelve.columns
+    .row.category-main-header.flex.v-center(style="flex-wrap: wrap")
+      .twelve.columns.tablet-container.full
+        .row.category-page-header.flex.v-center
+          .twelve.columns.mobile-center
+            h4 MY ORDERS &amp; TASKS
+        hr.normal-hr
+block sidebar
+  .row
+    .twelve.columns
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | Revenues
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | Order Statistics
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | My Orders &amp; Tasks
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | My Jobs
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | My Invoices
+      .flex.column-direction.j-content-center
+        span.green-divider.five.columns
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | Payment Method
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | Change Password
+block contentArea
+  .row
+    .twelve.columns.florescent-shadow
+      .row
+        .twelve.columns
+          div
+            // Nav tabs
+            ul.nav.nav-tabs(role='tablist')
+              li.active(role='presentation')
+                a.button(href='#orders', aria-controls='orders', role='tab', data-toggle='tab') My Order
+              li(role='presentation')
+                a.button(href='#tasks', aria-controls='tasks', role='tab', data-toggle='tab') Tasks
+            // Tab panes
+            .tab-content
+              #orders.tab-pane.active(role='tabpanel')
+                .row
+                  .twelve.columns
+                    - orderCount = 1
+                    - buttons = [{text: "Finished", color: "finished-button"}, {text: "Active", color: "active-task-button"}, {text: "Disputing", color: "disputing-button"}, {text: "Resolved", color: "resolved-button"}, {text: "Late", color: "late-button"}]
+                    while orderCount < 10
+                      - index = Math.floor(Math.random() * (buttons.length - 1))
+                      - button = buttons[index]
+                      .order-list-item(style="padding: 10px 30px")
+                        .row
+                          .nine.columns
+                            .twelve.columns
+                              a.order-title(href="#")
+                                h5 Custom order for I will create cool HIPSTER Logo
+                              p Order by <a href="#" class="order-by">Brandon Smith</a><br />
+                                small July, 25, 2016
+                          .three.columns
+                            p
+                              button.button.white-text(class=`${button.color}`) #{button.text}
+                        hr.normal-hr
+                      - orderCount++
+              #tasks.tab-pane(role='tabpanel')
+                .row
+                  .twelve.columns
+                    - taskCount = 1
+                    - buttons = [{text: "Finished", color: "finished-button"}, {text: "Active", color: "active-task-button"}, {text: "Disputing", color: "disputing-button"}, {text: "Resolved", color: "resolved-button"}, {text: "Late", color: "late-button"}]
+                    while taskCount < 10
+                      - index = Math.floor(Math.random() * (buttons.length - 1))
+                      - button = buttons[index]
+                      .order-list-item(style="padding: 10px 30px")
+                        .row
+                          .nine.columns
+                            .twelve.columns
+                              a.order-title(href="#")
+                                h5 These as a number of my tasks
+                              p Order by <a href="#" class="order-by">Brandon Smith</a><br />
+                                small July, 25, 2016
+                          .three.columns
+                            p
+                              button.button.white-text(class=`${button.color}`) #{button.text}
+                        hr.normal-hr
+                      - taskCount++

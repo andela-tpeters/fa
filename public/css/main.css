@@ -234,6 +234,35 @@ body {
     margin: 0;
 }
 
+.white-text {
+    color: white;
+}
+
+.late-button {
+    background-color: red;
+    border: unset;
+}
+
+.resolved-button {
+    background-color: #5D8635;
+    border: unset;
+}
+
+.disputing-button {
+    background-color: #3B567B;
+    border: unset;
+}
+
+.active-task-button {
+    background-color: #00CCBB;
+    border: unset;
+}
+
+.finished-button {
+    background-color: #27ae60;
+    border: unset;
+}
+
 .banner-wrapper {
     background-image: url("https://cdn.enginethemes.com/microjobengine/sites/2/5.jpg");
     min-height: calc(0.0625em * 500);
@@ -858,7 +887,7 @@ h2.horizontal-rule span {
 
 .green-divider {
     display: block;
-    height: 4px;
+    height: 2px;
     background: -webkit-linear-gradient(left, #0c6130, #27ae60);
     background: linear-gradient(to right, #0c6130, #27ae60);
     margin: 1.5em 0;
@@ -967,4 +996,36 @@ h2.horizontal-rule span {
 
 .sellers-profile-product-stars i:first-child {
     padding: 0;
+}
+
+ul.nav.nav-tabs {
+    border-bottom: unset;
+}
+
+ul.nav.nav-tabs li.active a {
+    border: unset;
+    border-radius: unset;
+    border-top: 2px solid #0c6130;
+    cursor: pointer;
+}
+
+.order-list-item a.order-title {
+    color: black;
+}
+
+.order-list-item a.order-title:hover {
+    text-decoration: none;
+    color: #27ae60;
+}
+
+.order-list-item a.order-by {
+    color: #27ae60;
+}
+
+.order-list-item a.order-by:hover {
+    text-decoration: none;
+}
+
+.order-list-item h5 {
+    margin-bottom: 1rem;
 }

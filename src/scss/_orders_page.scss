@@ -1,0 +1,36 @@
+ul.nav.nav-tabs {
+	border-bottom: unset;
+	li.active {
+		a {
+			border: unset;
+			border-radius: unset;
+			border-top: 2px solid $forestgreen;
+			cursor: pointer;
+			&:hover {
+				// border-radius: unset;
+				// border: unset;
+			}
+		}
+	}
+}
+
+.order-list-item {
+	a.order-title {
+		color: black;
+		&:hover {
+			text-decoration: none;
+			color: $mediumseagreen;
+		}
+	}
+
+	a.order-by {
+		color: $mediumseagreen;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	h5 {
+		margin-bottom: 1rem;
+	}
+}
