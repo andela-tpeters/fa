@@ -1,0 +1,64 @@
+extends base_layout
+block content
+  .container
+    .row
+      .twelve.columns.florescent-shadow(style="margin-top: 50px; padding: 50px")
+        .row
+          .twelve.columns.flex.v-center.j-content-center
+            h3 Post A Job
+          .post-form-container
+            form.twelve.columns.flex.j-content-center.column-direction(style="padding: 30px")
+              .row
+                label.twelve.columns(style="position: relative")
+                  span.one.columns(style="display: inline-block; position: absolute; top: 4px; left: 0; color: gray; text-align: center; font-size: 18px; width: 36px;")
+                    i.fa.fa-user
+                  input.twelve.columns(type="text", name="title", placeholder="Job Title", style="padding-left: 50px;")
+              .row
+                label.six.columns(style="position: relative")
+                  span.one.columns(style="display: inline-block; position: absolute; top: 4px; left: 0; color: gray; text-align: center; font-size: 18px; width: 36px;")
+                    i.fa.fa-dollar
+                  input.twelve.columns(type="text", name="price", placeholder="Price", style="padding-left: 50px;")
+                label.six.columns(style="position: relative")
+                  span.one.columns(style="display: inline-block; position: absolute; top: 4px; left: 0; color: gray; text-align: center; font-size: 18px; width: 36px;")
+                    i.fa.fa-calendar
+                  input.twelve.columns(type="date", name="delivery-time", placeholder="Time of delivery", style="padding-left: 50px;")
+              .row
+                label.six.columns(style="position: relative")
+                  //- span.one.columns(style="display: inline-block; position: absolute; top: 4px; left: 0; color: gray; text-align: center; font-size: 18px; width: 36px;")
+                  //-   i.fa.fa-calendar
+                  select.twelve.columns(type="text", name="category", style="padding-left: 50px;")
+                    option(value="", style="padding-left: 50px;") Select your job category
+              .row
+                hr
+                h6 DESCRIPTION
+                label.twelve.columns(style="position: relative")
+                  span.one.columns(style="display: inline-block; position: absolute; top: 4px; left: 0; color: gray; text-align: center; font-size: 18px; width: 36px;")
+                    i.fa.fa-edit
+                  textarea#post-a-job-description.twelve.columns(name="description", style="padding-left: 50px;", placeholder="Description")
+              .row
+                hr
+                .twelve.columns.flex.v-center.j-content-center.column-direction(style="background-color: #e8e8e8; height: 400px")
+                  h1(style="color: gray")
+                    i.fa.fa-image
+                  p(style="color: gray; text-align: center")
+                    | Up to 5 pictures whose each minimum size is 768 x 435px<br />Select one picture for your featured image
+              .row
+                hr
+                label.twelve.columns(for="job-images")
+                  span.twelve.columns(style="display: block; color: gray; text-align: center; font-size: 30px;cursor: pointer")
+                    i.fa.fa-plus
+                    small &nbsp;&nbsp;Add Images
+                  input(type="file", name="job-images", id="job-images", style="display: none")
+              .row
+                hr
+                label.twelve.columns(style="position: relative")
+                  input.twelve.columns(type="text", name="tags", placeholder="Jobs Tags")
+              .row
+                hr
+                p.twelve.columns Opening message is automatically displayed as your first message in the order detail page.
+                textarea.twelve.columns(placeholder="Opening Message", name="opening-message")
+              .row
+                hr
+                button.finished-button.white-text(type="button") SAVE
+                | &nbsp;&nbsp;
+                button(type="button") Discard

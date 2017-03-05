@@ -13,6 +13,7 @@ app.get('/categories', function(req, res) { res.sendFile(__dirname + '/public/si
 app.get('/profile', function(req, res) { res.sendFile(__dirname + '/public/profile_page.html'); });
 app.get('/sellers', function(req, res) { res.sendFile(__dirname + '/public/sellers_profile.html'); });
 app.get('/orders', function(req, res) { res.sendFile(__dirname + '/public/orders.html'); });
+app.get('/post_job', function(req, res) { res.sendFile(__dirname + '/public/post_job.html'); });
 
 app.listen(port, function() { console.log("I am listening at: " + port); });
 

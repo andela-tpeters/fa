@@ -35,3 +35,10 @@ $(document).ready(function() {
 $('#profile-show-more-button').click(function() {
     $('#sellers-profile-bio').toggleClass('sellers-profile-bio-show');
 });
+
+tinymce.init({
+    selector: "#post-a-job-description",
+    height: 200,
+    menubar: false,
+    content_css: 'js/tinymce/skins/lightray/content.min.css'
+});
