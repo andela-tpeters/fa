@@ -42,3 +42,15 @@ tinymce.init({
     menubar: false,
     content_css: 'js/tinymce/skins/lightray/content.min.css'
 });
+
+$('#toggle-notify, #close-notify').click(function (){
+    $('#notifications-panel').toggleClass('show-overlay');
+    $('#notification-panel-wrapper').toggleClass('open-notifications');
+});
+
+$('#notifications-panel').click(function() {
+    $('#notifications-panel').toggleClass('show-overlay');
+    $('#notification-panel-wrapper').toggleClass('open-notifications');
+});
+
+

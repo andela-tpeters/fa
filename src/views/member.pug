@@ -1,21 +1,37 @@
 extends base_layout
 block loggedInMenu
-  .six.columns.u-pull-right.tablet-four.mobile-seven
-    div.u-pull-right.signin
+  .eight.columns.u-pull-right.tablet-four.mobile-seven
+    .u-pull-right.signin
       .signin-content.member.mobile-member
-        a(href="#", class="button")
+        a(href="#", class="button", id="toggle-notify")
           i(class="fa fa-bell")
-        a(href="#", class="button t-hide")
-          i(class="fa fa-comment")
+        .button.t-hide
+          .dropdown
+            i(class="fa fa-comment",data-toggle="dropdown", aria-haspopup="true", aria-expanded="false", id="comment-dropdown")
+            .row.dropdown-menu(aria-labelledby="comment-dropdown")
+              .twelve.columns
+                .flex(style="padding: 10px")
+                  | Chat Notification 
         a(href="#", class="button post-job t-hide")
           span Post a job
           i(class="fa fa-plus")
         a#mobile-menu-profile-button(href="#", class="button l-hide")
           span(class="avatar")
-        a(href="#", class="button t-hide")
-          span(class="avatar")
-          span.member-avatar John Doe
-          i(class="fa fa-angle-right")
+        .button.t-hide
+          .dropdown
+            div(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false", id="avatar-dropdown")
+              span(class="avatar", role="button")
+              span.member-avatar(role="button") John Doe
+              i(class="fa fa-angle-right", role="button")
+            .dropdown-menu(aria-labelledby="avatar-dropdown")
+              .flex.j-content-center.column-direction.v-center
+                a(href="#") Dashoboard
+                a(href="#") My Profile
+                a(href="#") My Orders
+                a(href="#") My Jobs
+                a(href="#") My Invoices
+                a(href="#") Sign Out
+
   #mobile-member-menu.mobile-member-menu.l-hide
     a#mobile-menu-profile-close(href="#", class="button") X Close
     a(href="#", class="button") Dashboard
@@ -25,6 +41,23 @@ block loggedInMenu
     a(href="#", class="button") Post a Job
     a(href="#", class="button") Message
     a(href="#", class="button") Sign Out
+  #notifications-panel
+    .notification-panel-wrapper#notification-panel-wrapper
+      button.close-button#close-notify(style="border: unset") Close
+      h3.header Notifications
+      hr
+      .notification-item
+        .row.flex.j-content-center.v-center
+          .two.columns.avatar-wrapper
+            span(class="avatar", role="button")
+          .ten.columns.
+            TThis is the Notifications Panel for showing all the notificaions
+        hr
+        //- .row.flex.j-content-center.v-center(style="max-height: 200px")
+        //-   .two.columns(style="position: relative; height: 46px")
+        //-     span(class="avatar", role="button")
+        //-   .ten.columns.
+        //-     TThis is the Notifications Panel for showing all the notificaions
 
 block content
   .row

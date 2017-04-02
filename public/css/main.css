@@ -273,6 +273,37 @@ input[type=date] {
     box-sizing: border-box;
 }
 
+.dropdown-menu a {
+    font-size: 11px;
+    border-bottom: 1px solid gray;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-menu a:hover {
+    background-color: #27ae60;
+    color: white;
+}
+
+.dropdown-menu a:first-child {
+    margin-top: -5px;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: unset;
+}
+
+.service-mart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .banner-wrapper {
     background-image: url("https://cdn.enginethemes.com/microjobengine/sites/2/5.jpg");
     min-height: calc(0.0625em * 500);
@@ -853,13 +884,13 @@ h2.horizontal-rule span {
 .avatar {
     display: inline-block;
     box-sizing: border-box;
-    position: absolute;
+    position: absolute !important;
     border-radius: 50%;
     background-image: url(http://lorempixel.com/50/50/people);
     height: 40px;
     width: 40px;
-    top: 8px;
-    left: 850px;
+    top: 2px;
+    right: 100%;
 }
 
 @media screen and (max-width: 550px) {
@@ -1038,4 +1069,70 @@ ul.nav.nav-tabs li.active a {
 
 .order-list-item h5 {
     margin-bottom: 1rem;
+}
+
+.open-notifications {
+    right: 0 !important;
+}
+
+.show-overlay {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+#notifications-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    opacity: 0;
+}
+
+#notification-panel-wrapper {
+    position: absolute;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
+    height: 100vh;
+    right: -70%;
+    min-width: 400px;
+    background-color: white;
+}
+
+.avatar-wrapper {
+    position: relative;
+    height: 46px;
+}
+
+.avatar-wrapper span.avatar {
+    right: 5% !important;
+}
+
+.notification-panel-wrapper {
+    position: relative;
+}
+
+.notification-panel-wrapper .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.notification-panel-wrapper .header {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.notification-item {
+    padding: 20px;
+}
+
+.notification-item .row {
+    max-height: 200px;
 }
