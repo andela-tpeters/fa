@@ -1,0 +1,197 @@
+extends pages_layout
+block subTopHeader
+  .twelve.columns
+    .row.category-main-header.flex.v-center(style="flex-wrap: wrap")
+      .twelve.columns.tablet-container.full
+        .row.category-page-header.flex.v-center
+          .twelve.columns.mobile-center &nbsp;
+        hr.normal-hr
+block sidebar
+  .row.profile-row
+    .twelve.columns.florescent-shadow
+      .row
+        .six.columns.flex.v-center.j-content-center(style="min-height: 56px;")
+          .job-stars(style="color: mediumseagreen;font-size: 17px;")
+            span
+              i.fa.fa-star
+            span
+              i.fa.fa-star
+            span
+              i.fa.fa-star
+            span
+              i.fa.fa-star
+            span
+              i.fa.fa-star
+        .six.columns.flex.v-center.j-content-center(style="min-height: 56px;")
+          .job-price
+            span 5,000
+      hr.normal-hr
+      .row
+        .twelve.columns.flex.v-center.j-content-center.column-direction
+          table.nine.columns
+            tr
+              td.fade-6
+                span.icon-right-space
+                  i.fa.fa-star
+                | Overall
+              td
+                span.pull-right 45
+            tr
+              td.fade-6
+                span.icon-right-space
+                  i.fa.fa-comment
+                | Reviews
+              td
+                span.pull-right 45
+            tr
+              td.fade-6
+                span.icon-right-space
+                  i.fa.fa-shopping-cart
+                | Reviews
+              td
+                span.pull-right 45
+            tr
+              td.fade-6
+                span.icon-right-space
+                  i.fa.fa-calendar
+                | Time of Delivery
+              td
+                span.pull-right 45 day(s)
+          button.nine.columns.button.base-button Order Now
+      hr
+      .row
+        .twelve.columns.flex.v-center.j-content-center.column-direction
+          .nine.columns
+            .row
+              .twelve.columns
+                h5 Extra
+            .row.extra-wrapper
+              .six.columns
+                  input(type="checkbox")
+                  span Vector files
+              .six.columns
+                .job-price
+                  span.pull-right 5,000
+            .row.extra-wrapper
+              .six.columns
+                input(type="checkbox")
+                span Vector files
+              .six.columns
+                .job-price
+                  span.pull-right 5,000
+            .row.extra-wrapper
+              .six.columns
+                input(type="checkbox")
+                span Vector files
+              .six.columns
+                .job-price
+                  span.pull-right 5,000
+  .row.profile-row
+    .twelve.columns.florescent-shadow
+      .row.flex.v-center.column-direction
+        .profile-picture
+        .profile.ten.columns.flex.column-direction.j-content-center.v-center.mobile-seven
+          h5.name John Doe
+          h6.email johndoe@example.com
+          span
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+          span.green-divider.four.columns
+          p.ten.columns
+            i(class="fa fa-map-marker", style="font-size: 19px;")
+            | &nbsp;&nbsp;&nbsp;From
+            span.u-pull-right Great Britain
+          p.ten.columns
+            i(class="fa fa-globe", style="font-size: 19px;")
+            | &nbsp;&nbsp;&nbsp;Languages
+            span.u-pull-right English
+          .ten.columns
+            .twelve.columns
+              i(class="fa fa-info", style="font-size: 19px;")
+              | &nbsp;&nbsp;&nbsp;Bio
+              hr.normal-hr
+              p#sellers-profile-bio
+                | I am a logo designer, web &amp; mobile designer, illustrator, or do any design you ask me to. I am here to rock your world with profesisonal mJobs. Check them out! ;) Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              button.button#profile-show-more-button Show More
+          hr
+          p
+            a.button.base-button(href="#") Contact Me <i class="fa fa-chat"></i>
+
+block contentArea
+  .row
+    .twelve.columns.florescent-shadow
+      .row
+        .twelve.columns
+          .row
+            .twelve.columns.profile-info-section
+              h5.profile-info-heading Job Title
+                hr.normal-hr
+              #carousel-example-generic.carousel.slide(data-ride='carousel', style="min-height: 294px")
+                // Wrapper for slides
+                .carousel-inner(role='listbox')
+                  .item.active
+                    img(src='http://lorempixel.com/800/300/people', alt='Sport 1')
+                  .item
+                    img(src='http://lorempixel.com/800/300/nightlife', alt='Sport 2')
+                  .item
+                    img(src='http://lorempixel.com/800/300/abstract', alt='Sport 3')
+                // Controls
+                a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+                  span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                  span.sr-only Previous
+                a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+                  span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                  span.sr-only Next
+              hr
+              .row
+                .twelve.columns
+                  h5 DESCRIPTION
+                  hr.normal-hr
+                  p.
+                    I will create a professional, eye catching killer vectorized logo for your website/ business. My designs will represent a memorable image for your target market. (Real Estate, Gaming, Techno, Fitness, Music, Education, Beauty, Sports, Travel etc.)
+
+                  h5 WHAT YOU GET FOR N5,000:
+
+                  p.
+                    One (1) Logo concept for the proposed brand in transparent Background (.png image with 300 dpi.)
+                    One (1) Modification offered for simple edits. Redesigning the whole initial concept will not be covered for this free modification.
+                  
+                  h5 What I DO NOT Do: 
+
+                  p.
+                    I do not draw advance characters, illustrations or 3D designs.
+                    I do not work with intermediaries, simply I won’t work for your clients. (Because I don’t want to redo everything according to what your client think time to time.)
+                    Things to be noted:
+
+                  p.
+                    Not all my portfolio images are done for basic $5 gigs. They are the clues which show my capacity of designing.
+                    Any changes requested due to careless details supplied at the start, will simply be ignored because it\’s not my fault!
+                    If you wish to use the logo in printing material without reducing the quality of the logo, Then Check GOLD PACKAGE for source files. 
+                    Already served 3500+ satisfied buyers and counting…
+
+                    Why Waiting?? Order Now.
+              hr
+              .row
+                .twelve.columns
+                  button.four.columns.button.base-button ORDER NOW
+
+          .row
+            .twelve.columns.profile-info-section
+              h5.profile-info-heading Connect to Social
+                hr.normal-hr
+              .row
+                .twelve.columns.profile-info-description
+                  .socials
+                    a.button.fb(href="#")
+                      i.fa.fa-facebook
+                      | &nbsp;&nbsp;&nbsp;Facebook
+                    a.button.gp(href="#")
+                      i.fa.fa-google-plus
+                      | &nbsp;&nbsp;&nbsp;Plus
+                    a.button.tw(href="#")
+                      i.fa.fa-twitter
+                      | &nbsp;&nbsp;&nbsp;Twitter
+                                     

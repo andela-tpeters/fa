@@ -1,0 +1,25 @@
+@import "variables";
+
+.extra-wrapper {
+	padding: 10px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #ececec;
+    div {
+    	input {
+	    	margin-right: 10px;
+    	}
+    }
+}
+
+.icon-right-space {
+	margin-right: 10px;
+}
+
+.fade-6 {
+	color: rgba(0,0,0,0.6);
+}
+
+.job-price {
+	color: $mediumseagreen;
+	font-size: 17px;
+}
