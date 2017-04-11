@@ -28,7 +28,7 @@
     justify-content: flex-start;
 }
 
-.border {
+.border, .chat-history .chat-avatar {
     border: 1px solid;
 }
 
@@ -568,7 +568,7 @@ footer {
 }
 
 @media screen and (min-width: 1000px) {
-    .avatar {
+    .avatar, .chat-history .chat-avatar {
         right: 15%;
     }
 }
@@ -881,7 +881,7 @@ h2.horizontal-rule span {
     font-size: 20px;
 }
 
-.avatar {
+.avatar, .chat-history .chat-avatar {
     display: inline-block;
     box-sizing: border-box;
     position: absolute !important;
@@ -894,7 +894,7 @@ h2.horizontal-rule span {
 }
 
 @media screen and (max-width: 550px) {
-    .avatar {
+    .avatar, .chat-history .chat-avatar {
         left: 300px;
     }
 }
@@ -1109,7 +1109,7 @@ ul.nav.nav-tabs li.active a {
     height: 46px;
 }
 
-.avatar-wrapper span.avatar {
+.avatar-wrapper span.avatar, .avatar-wrapper .chat-history span.chat-avatar, .chat-history .avatar-wrapper span.chat-avatar {
     right: 5% !important;
 }
 
@@ -1158,4 +1158,83 @@ ul.nav.nav-tabs li.active a {
 .job-price {
     color: #27ae60;
     font-size: 17px;
+}
+
+.chat-area {
+    min-height: 500px;
+    background-color: #ececec;
+    position: relative;
+}
+
+.chat-area .chat-history {
+    height: 430px;
+    margin-bottom: 0;
+    border-color: #ececec;
+    padding: 10px;
+    overflow: scroll;
+}
+
+.chat-area input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: unset;
+    width: 100%;
+    border: 1px solid #ececec;
+    margin-bottom: unset;
+    height: 70px;
+    padding: 10px;
+}
+
+.chat-area input:focus {
+    outline: unset;
+}
+
+.chat-history .chat-avatar {
+    position: unset !important;
+    left: 0;
+}
+
+.chat-avatar-container {
+    width: 5% !important;
+}
+
+.chat-text-container p {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: unset;
+}
+
+.chat-text-container .seller-text-bg {
+    background-color: white;
+}
+
+.chat-text-container .buyer-text-bg {
+    background-color: #27ae60 !important;
+    color: white;
+}
+
+.single-chat-container {
+    padding: 10px;
+}
+
+.date-stamp-container {
+    padding: 5px;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.date-stamp-container p {
+    color: #27ae60;
 }

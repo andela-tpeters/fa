@@ -13,8 +13,33 @@ var livereload = require('gulp-livereload');
 var beautify = require('gulp-cssbeautify');
 var pug = require('gulp-pug');
 var nodemon = require('gulp-nodemon');
+var htmlbeautify = require('gulp-html-beautify');
 
-var absolutePath = function(source, folder, file = '') { 
+var htmlbeautifyConfig = {
+    "indent_size": 2,
+    "indent_char": " ",
+    "eol": "\n",
+    "indent_level": 0,
+    "indent_with_tabs": false,
+    "preserve_newlines": true,
+    "max_preserve_newlines": 10,
+    "jslint_happy": false,
+    "space_after_anon_function": false,
+    "brace_style": "collapse",
+    "keep_array_indentation": false,
+    "keep_function_indentation": true,
+    "space_before_conditional": true,
+    "break_chained_methods": false,
+    "eval_code": false,
+    "unescape_strings": false,
+    "wrap_line_length": 80,
+    "wrap_attributes": "auto",
+    "wrap_attributes_indent_size": 4,
+    "end_with_newline": true
+};
+
+var absolutePath = function(source, folder, file) { 
+	if(!file) file = '';
 	if(/.min.(css|js)/.exec(file)){
 		// return "!" + path.resolve(source, folder) + "/" + file;
 	}
@@ -25,6 +50,8 @@ var absolutePath = function(source, folder, file = '') {
 
 	return path.resolve(source, folder) + "/" + file; 
 }
+
+
 
 // var imagefiles = fs.readdirSync(absolutePath('src','images')).map(function(filename) { return absolutePath('src','images',filename);});
 
@@ -65,6 +92,7 @@ gulp.task('minify-css', function() {
 gulp.task('html::pug', function() {
 	return gulp.src(htmlFiles.concat(htmlPartials))
 				.pipe(pug({}))
+				.pipe(htmlbeautify(htmlbeautifyConfig))
 				.pipe(rename(function(path) {
 					path.extname = ".html";
 				}))
