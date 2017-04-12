@@ -38,7 +38,7 @@ body {
 	@extend .flex;
 	@extend .v-center;
 	@include calculate(50, 'min-height');
-	@include calculate(60, 'height');
+	// @include calculate(60, 'height');
 	@include calculate(65, 'margin-top');
 	@include calculate(7.5, 'padding');
 	transition: all 1s;
@@ -91,7 +91,7 @@ body {
 	}
 
 	&:hover {
-		height: 150px;
+		// height: 150px;
 	}
 }
 

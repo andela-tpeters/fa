@@ -1,0 +1,172 @@
+extends pages_layout
+block subTopHeader
+  .twelve.columns
+    .row.category-main-header.flex.v-center(style="flex-wrap: wrap")
+      .twelve.columns.tablet-container.full
+        .row.category-page-header.flex.v-center
+          .twelve.columns.mobile-center
+            h4 DASHBOARD
+        hr.normal-hr
+block sidebar
+  .row.profile-row
+    .twelve.columns.florescent-shadow
+      .row.flex.v-center.column-direction
+        .profile-picture
+        .profile.eight.columns.flex.column-direction.j-content-center.v-center
+          h5
+            span.name(href="#", id="", data-pk="1", data-type="text") John Doe
+          h6.email johndoe@example.com
+          span
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+          span.green-divider.four.columns
+          label.u-full-width(style="opacity: .5")
+            i(class="fa fa-map-marker", style="font-size: 19px;")
+            | &nbsp;&nbsp;&nbsp;From
+          select.twelve.columns(id="selector")
+            option(value="great_britain") Great Britain
+          label.u-full-width(style="opacity: .5")
+            i(class="fa fa-globe", style="font-size: 19px;")
+            | &nbsp;&nbsp;&nbsp;Languages
+          select.twelve.columns(id="selector")
+            option(value="english") English
+  .row
+    .twelve.columns
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | Revenues
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | Order Statistics
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | My Orders &amp; Tasks
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | My Jobs
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | My Invoices
+      .flex.column-direction.j-content-center
+        span.green-divider.five.columns
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | Payment Method
+      .flex.column-direction
+        a.button.twelve.columns.green-button-basic.collapsed(role='button', href='#')
+          | Change Password
+
+block contentArea
+  .row
+    .twelve.columns.florescent-shadow(style="padding: 20px")
+      .row
+        .twelve.columns.profile-info-section
+          h5.profile-info-heading Revenues
+          span.green-divider.one.columns.small-margin
+      .row
+        .four.columns
+          .rev-summary-column.flex.j-content-center.v-center.column-direction
+            h6 WORKING
+            p.cummulative-price
+              span.currency &#8358;
+              span.price 8,99
+        .four.columns
+          .rev-summary-column.flex.j-content-center.v-center.column-direction.l-border.r-border
+            h6 AVAILABLE
+            p.cummulative-price
+              span.currency &#8358;
+              span.price 8,99
+        .four.columns
+          .rev-summary-column.flex.j-content-center.v-center.column-direction
+            h6 PENDING
+            p.cummulative-price
+              span.currency &#8358;
+              span.price 8,99
+      .row
+        .twelve.columns.profile-info-section.flex.v-center
+          h5.three.columns.profile-info-heading(style="width: 16%; margin-bottom: 0") Balance
+          span.currency(style="color: mediumseagreen") &#8358;
+          span.price(style="color: mediumseagreen; font-size: 30px; font-weight: bold") 8,99 &nbsp;
+          span.price-info(style="color: darkgray; font-style: italic") (Working + Available + Pending)
+    .row(style="background-color: #ececec")
+      .twelve.columns
+        .row
+          .six.columns.flex.v-center.j-content-center.r-border(style="min-height: 70px")
+            p(style="margin-bottom: 0") WITHDRAWN: &nbsp;&#8358; 22.00
+              span 
+          .six.columns.flex.v-center.j-content-center(style="min-height: 70px")
+            p(style="margin-bottom: 0") SPENT: &nbsp;&#8358; 22.00
+  .row
+    .twelve.columns.florescent-shadow(style="padding: 20px")
+      .row
+        .twelve.columns.profile-info-section
+          h5.profile-info-heading Order Statistics
+          span.green-divider.one.columns.small-margin
+      .row
+        .twelve.columns
+          div(style="width: 100%; min-height: 200px")
+            canvas.chart-area#summaryChart
+
+  block scripts
+    script.
+      var ctx = document.getElementById("summaryChart");
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
+          }
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

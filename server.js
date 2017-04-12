@@ -4,6 +4,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 app.set('views', 'public');
 app.use(express.static('public'));
+app.use(express.static('node_modules'));
 app.use(express.static('bower_components'));
 app.use(morgan('common'));
 
@@ -16,6 +17,7 @@ app.get('/orders', function(req, res) { res.sendFile(__dirname + '/public/orders
 app.get('/post_job', function(req, res) { res.sendFile(__dirname + '/public/post_job.html'); });
 app.get('/job', function(req, res) { res.sendFile(__dirname + '/public/job_page.html'); });
 app.get('/conversation', function(req, res) { res.sendFile(__dirname + '/public/conversation.html'); });
+app.get('/dashboard', function(req, res) { res.sendFile(__dirname + '/public/dashboard.html'); });
 
 app.listen(port, function() { console.log("I am listening at: " + port); });
 

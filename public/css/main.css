@@ -90,7 +90,6 @@ body {
 
 .menu-wrapper {
     min-height: calc(0.0625em * 50);
-    height: calc(0.0625em * 60);
     margin-top: calc(0.0625em * 65);
     padding: calc(0.0625em * 7.5);
     -webkit-transition: all 1s;
@@ -150,10 +149,6 @@ body {
 
 .menu-wrapper .menu:hover:after {
     height: 50%;
-}
-
-.menu-wrapper:hover {
-    height: 150px;
 }
 
 .cat-latest-section, .latest, .categories {
@@ -1171,7 +1166,7 @@ ul.nav.nav-tabs li.active a {
     margin-bottom: 0;
     border-color: #ececec;
     padding: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .chat-area input {
@@ -1222,19 +1217,59 @@ ul.nav.nav-tabs li.active a {
     padding: 5px;
 }
 
-body::-webkit-scrollbar {
-    width: 1em;
+.chat-history::-webkit-scrollbar {
+    width: 2px;
 }
 
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+.chat-history::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
 }
 
-body::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
+.chat-history::-webkit-scrollbar-thumb {
+    background-color: #0c6130;
     outline: 1px solid slategrey;
+    border-radius: 30px;
 }
 
 .date-stamp-container p {
     color: #27ae60;
+}
+
+.small-margin {
+    margin: 0 0 0 10px !important;
+}
+
+.cummulative-price {
+    color: #27ae60;
+    position: relative;
+    font-weight: 700;
+    margin-left: 7px;
+}
+
+.cummulative-price .price {
+    font-size: 20px;
+}
+
+.cummulative-price .currency {
+    position: absolute;
+    top: 0;
+    left: -12px;
+}
+
+.rev-summary-column h6 {
+    margin-bottom: 10px;
+}
+
+.rev-summary-column:nth-child(2) {
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+}
+
+.l-border {
+    border-left: 1px solid #ececec;
+}
+
+.r-border {
+    border-right: 1px solid #ececec;
 }
